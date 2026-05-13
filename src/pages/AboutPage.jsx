@@ -105,7 +105,7 @@ export default function AboutPage() {
           <div className="max-w-2xl">
             <p className="section-subtitle mb-4">✦ Sobre Nós ✦</p>
             <h1
-              className={`font-playfair text-5xl lg:text-7xl font-bold text-njinga-white mb-5 leading-tight transition-all duration-700 ${
+              className={`font-playfair text-4xl sm:text-5xl lg:text-7xl font-bold text-njinga-white mb-5 leading-tight transition-all duration-700 ${
                 heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >

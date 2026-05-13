@@ -105,11 +105,11 @@ export default function Hero() {
             loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <span className="h-px w-16 bg-gold/50" />
-          <p className="font-inter text-njinga-white/80 text-base sm:text-lg font-light tracking-wide">
+          <span className="hidden sm:block h-px w-16 bg-gold/50 shrink-0" />
+          <p className="font-inter text-njinga-white/80 text-sm sm:text-lg font-light tracking-wide text-center px-2">
             A sua casa em Luanda, no coração de Morro Bento
           </p>
-          <span className="h-px w-16 bg-gold/50" />
+          <span className="hidden sm:block h-px w-16 bg-gold/50 shrink-0" />
         </div>
 
         <div
@@ -131,18 +131,20 @@ export default function Hero() {
             loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <div className="inline-flex items-center gap-0 glass-card px-6 py-4 mx-auto">
-            {stats.map((stat, i) => (
-              <React.Fragment key={stat.label}>
-                <div className="text-center px-6">
-                  <p className="font-playfair text-2xl font-bold text-gold leading-none">{stat.value}</p>
-                  <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-njinga-white/50 mt-1.5">
-                    {stat.label}
-                  </p>
-                </div>
-                {i < stats.length - 1 && <span className="stat-divider" />}
-              </React.Fragment>
-            ))}
+          <div className="glass-card py-4 px-2 sm:px-6">
+            <div className="flex items-center">
+              {stats.map((stat, i) => (
+                <React.Fragment key={stat.label}>
+                  <div className="flex-1 text-center px-2 sm:px-4">
+                    <p className="font-playfair text-xl sm:text-2xl font-bold text-gold leading-none">{stat.value}</p>
+                    <p className="font-inter text-[9px] sm:text-[10px] tracking-[0.15em] sm:tracking-[0.2em] uppercase text-njinga-white/50 mt-1.5">
+                      {stat.label}
+                    </p>
+                  </div>
+                  {i < stats.length - 1 && <span className="stat-divider" />}
+                </React.Fragment>
+              ))}
+            </div>
           </div>
         </div>
       </div>

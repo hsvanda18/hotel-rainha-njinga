@@ -70,18 +70,18 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center gap-2 group"
+            className="flex items-center gap-2 group shrink-0"
             onClick={() => setMenuOpen(false)}
           >
             <Crown
-              size={24}
+              size={22}
               className="text-gold transition-transform duration-300 group-hover:scale-110"
             />
             <div className="flex flex-col leading-tight">
-              <span className="font-playfair text-lg font-bold text-gold tracking-wide">
+              <span className="font-playfair text-base lg:text-lg font-bold text-gold tracking-wide">
                 Hotel Rainha
               </span>
-              <span className="font-playfair text-sm font-medium text-gold/80 tracking-[0.25em] uppercase">
+              <span className="font-playfair text-xs lg:text-sm font-medium text-gold/80 tracking-[0.2em] uppercase">
                 Njinga
               </span>
             </div>
@@ -137,7 +137,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-gold p-2 focus:outline-none"
+            className="lg:hidden text-gold p-2 focus:outline-none shrink-0"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >

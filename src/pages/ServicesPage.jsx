@@ -23,7 +23,7 @@ function ServiceCard({ service, index, visible }) {
   const Icon = service.icon
   return (
     <div
-      className={`group bg-njinga-black border border-njinga-gray/40 hover:border-gold/40 overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-gold/10 ${
+      className={`relative group bg-njinga-black border border-njinga-gray/40 hover:border-gold/40 overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-gold/10 ${
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
       style={{ transitionDelay: `${index * 80}ms` }}
@@ -171,7 +171,7 @@ export default function ServicesPage() {
           <div className="max-w-2xl">
             <p className="section-subtitle mb-4">✦ O Que Oferecemos ✦</p>
             <h1
-              className={`font-playfair text-5xl lg:text-7xl font-bold text-njinga-white mb-5 leading-tight transition-all duration-700 ${
+              className={`font-playfair text-4xl sm:text-5xl lg:text-7xl font-bold text-njinga-white mb-5 leading-tight transition-all duration-700 ${
                 heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
