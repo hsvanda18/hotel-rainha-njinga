@@ -218,6 +218,11 @@ export default function Footer() {
             ))}
           </div>
         </div>
+
+        {/* Developer credit */}
+        <p className="font-inter text-[11px] text-njinga-white/20 text-center mt-4">
+          Developed by <span className="text-gold/40">Bit &amp; Brush</span>
+        </p>
       </div>
     </footer>
   )
