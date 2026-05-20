@@ -59,7 +59,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`nav-animate fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
           ? 'bg-njinga-black/95 backdrop-blur-md shadow-lg shadow-black/50 py-3'
           : 'bg-transparent py-5'

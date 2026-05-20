@@ -68,31 +68,6 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-njinga-black/60 via-njinga-black/40 to-njinga-black/95" />
       <div className="absolute inset-0 bg-gradient-to-r from-njinga-black/50 via-transparent to-njinga-black/50" />
 
-      {/* Botanical ornament — top left */}
-      <svg className="absolute top-0 left-0 w-48 sm:w-72 opacity-[0.13] pointer-events-none" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10,270 Q40,200 80,180 Q120,155 100,95 Q78,35 145,8" stroke="#C9A84C" strokeWidth="1.5" fill="none"/>
-        <path d="M80,180 Q48,148 18,158" stroke="#C9A84C" strokeWidth="1.2" fill="none"/>
-        <path d="M100,130 Q68,98 48,108" stroke="#C9A84C" strokeWidth="1.2" fill="none"/>
-        <ellipse cx="20" cy="160" rx="16" ry="9" fill="#C9A84C" transform="rotate(-30 20 160)"/>
-        <ellipse cx="50" cy="110" rx="14" ry="8" fill="#C9A84C" transform="rotate(-15 50 110)"/>
-        <ellipse cx="100" cy="93" rx="17" ry="9" fill="#C9A84C" transform="rotate(20 100 93)"/>
-        <ellipse cx="143" cy="10" rx="12" ry="7" fill="#C9A84C" transform="rotate(-10 143 10)"/>
-        <circle cx="145" cy="8" r="4" fill="#C9A84C" opacity="0.7"/>
-        <circle cx="100" cy="95" r="3" fill="#C9A84C" opacity="0.6"/>
-      </svg>
-
-      {/* Botanical ornament — bottom right */}
-      <svg className="absolute bottom-0 right-0 w-40 sm:w-60 opacity-[0.11] pointer-events-none" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ transform: 'rotate(165deg)' }}>
-        <path d="M10,270 Q40,200 80,180 Q120,155 100,95 Q78,35 145,8" stroke="#C9A84C" strokeWidth="1.5" fill="none"/>
-        <path d="M80,180 Q48,148 18,158" stroke="#C9A84C" strokeWidth="1.2" fill="none"/>
-        <path d="M100,130 Q68,98 48,108" stroke="#C9A84C" strokeWidth="1.2" fill="none"/>
-        <ellipse cx="20" cy="160" rx="16" ry="9" fill="#C9A84C" transform="rotate(-30 20 160)"/>
-        <ellipse cx="50" cy="110" rx="14" ry="8" fill="#C9A84C" transform="rotate(-15 50 110)"/>
-        <ellipse cx="100" cy="93" rx="17" ry="9" fill="#C9A84C" transform="rotate(20 100 93)"/>
-        <ellipse cx="143" cy="10" rx="12" ry="7" fill="#C9A84C" transform="rotate(-10 143 10)"/>
-        <circle cx="145" cy="8" r="4" fill="#C9A84C" opacity="0.7"/>
-      </svg>
-
       {/* Main content */}
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto">
         <div
