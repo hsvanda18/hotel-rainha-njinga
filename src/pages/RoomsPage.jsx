@@ -244,12 +244,14 @@ export default function RoomsPage() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [])
 
+  const parsePrice = (p) => Number(String(p).replace(/\./g, ''))
+
   const filtered = rooms
     .filter((r) => filter === 'all' || r.id === filter)
     .sort((a, b) =>
       sortByPrice === 'asc'
-        ? Number(a.price) - Number(b.price)
-        : Number(b.price) - Number(a.price)
+        ? parsePrice(a.price) - parsePrice(b.price)
+        : parsePrice(b.price) - parsePrice(a.price)
     )
 
   return (
@@ -260,8 +262,8 @@ export default function RoomsPage() {
       <section className="relative pt-32 pb-20 bg-njinga-charcoal overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1600&q=80&auto=format&fit=crop"
-            alt="Quartos do hotel"
+            src="/images/hotel/IMG_8978.jpeg"
+            alt="Quartos do Hotel Rainha Njinga"
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-njinga-black/60 via-njinga-charcoal/80 to-njinga-charcoal" />
@@ -283,7 +285,7 @@ export default function RoomsPage() {
               {[
                 { icon: Star, label: '4.9 / 5 avaliações' },
                 { icon: Shield, label: 'Cancelamento gratuito' },
-                { icon: Clock, label: 'Check-in às 14h' },
+                { icon: Clock, label: 'Check-in às 12h' },
               ].map(({ icon: Icon, label }) => (
                 <div key={label} className="flex items-center gap-2 text-njinga-white/50">
                   <Icon size={14} className="text-gold" />
@@ -358,7 +360,7 @@ export default function RoomsPage() {
               Contacte-nos directamente para obter a melhor oferta personalizada.
             </p>
             <div className="flex items-center justify-center gap-4 flex-wrap">
-              <a href="tel:+244923456789" className="btn-gold text-xs py-3 px-8">
+              <a href="tel:+244943354257" className="btn-gold text-xs py-3 px-8">
                 Ligar Agora
               </a>
               <Link to="/" className="btn-outline-gold text-xs py-3 px-8">

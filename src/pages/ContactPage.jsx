@@ -18,14 +18,14 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Telefone',
-    lines: ['+244 923 456 789', '+244 222 345 678'],
-    action: { href: 'tel:+244923456789', label: 'Ligar agora' },
+    lines: ['+244 943 354 257'],
+    action: { href: 'tel:+244943354257', label: 'Ligar agora' },
   },
   {
     icon: Mail,
     title: 'Email',
-    lines: ['reservas@hotelrainhanjinga.ao', 'info@hotelrainhanjinga.ao'],
-    action: { href: 'mailto:reservas@hotelrainhanjinga.ao', label: 'Enviar email' },
+    lines: ['hrainhanjinga@hotmail.com'],
+    action: { href: 'mailto:hrainhanjinga@hotmail.com', label: 'Enviar email' },
   },
   {
     icon: Clock,
@@ -39,29 +39,29 @@ const departments = [
   {
     icon: BedDouble,
     name: 'Reservas',
-    email: 'reservas@hotelrainhanjinga.ao',
-    phone: '+244 923 456 789',
+    email: 'hrainhanjinga@hotmail.com',
+    phone: '+244 943 354 257',
     desc: 'Reservas de quartos, estadias prolongadas e tarifas especiais.',
   },
   {
     icon: Users,
     name: 'Eventos & Reuniões',
-    email: 'eventos@hotelrainhanjinga.ao',
-    phone: '+244 923 456 790',
+    email: 'hrainhanjinga@hotmail.com',
+    phone: '+244 943 354 257',
     desc: 'Conferências, casamentos, eventos corporativos e propostas personalizadas.',
   },
   {
     icon: Utensils,
     name: 'Restaurante',
-    email: 'restaurante@hotelrainhanjinga.ao',
-    phone: '+244 923 456 791',
+    email: 'hrainhanjinga@hotmail.com',
+    phone: '+244 943 354 257',
     desc: 'Reservas de mesa, menus de grupo e pedidos especiais de catering.',
   },
   {
     icon: Info,
     name: 'Informações Gerais',
-    email: 'info@hotelrainhanjinga.ao',
-    phone: '+244 222 345 678',
+    email: 'hrainhanjinga@hotmail.com',
+    phone: '+244 943 354 257',
     desc: 'Questões gerais, sugestões, reclamações e parcerias comerciais.',
   },
 ]
@@ -172,7 +172,7 @@ export default function ContactPage() {
               organizar o seu evento ou responder a qualquer questão.
             </p>
             <div className="flex items-center gap-6 flex-wrap">
-              <a href="tel:+244923456789" className="btn-gold text-xs py-3 px-8 flex items-center gap-2">
+              <a href="tel:+244943354257" className="btn-gold text-xs py-3 px-8 flex items-center gap-2">
                 <Phone size={14} />
                 Ligar Agora
               </a>
@@ -468,7 +468,7 @@ export default function ContactPage() {
 
           <p className="font-inter text-xs text-njinga-white/30 text-center mt-6">
             Não encontrou resposta?{' '}
-            <a href="mailto:info@hotelrainhanjinga.ao" className="text-gold/60 hover:text-gold transition-colors duration-200">
+            <a href="mailto:hrainhanjinga@hotmail.com" className="text-gold/60 hover:text-gold transition-colors duration-200">
               Envie-nos um email
             </a>
             {' '}ou ligue para a recepção 24h.
