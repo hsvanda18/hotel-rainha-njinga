@@ -22,31 +22,35 @@ collections:
           - label: Quartos
             name: rooms
             widget: list
+            summary: "{{fields.name}} — {{fields.type}}"
             fields:
-              - { label: ID, name: id, widget: string }
-              - { label: Nome, name: name, widget: string }
-              - { label: Tipo, name: type, widget: string }
+              - { label: ID, name: id, widget: string, hint: "Identificador único, ex: suite, double, single. Não alterar depois de criado." }
+              - { label: Nome do Quarto, name: name, widget: string }
+              - { label: Tipo, name: type, widget: string, hint: "Ex: Suite Premium, Quarto Duplo, Quarto Individual" }
               - { label: Descrição, name: desc, widget: text }
-              - { label: "Preço (USD/noite)", name: price, widget: string }
-              - { label: Área, name: size, widget: string }
-              - { label: Hóspedes, name: guests, widget: string }
-              - { label: Imagem Principal (URL), name: image, widget: string }
-              - label: Imagens da Galeria (URLs)
+              - { label: "Preço (AOA/noite)", name: price, widget: string, hint: "Apenas o número, ex: 25000" }
+              - { label: Área, name: size, widget: string, hint: "Ex: 45 m²" }
+              - { label: Hóspedes, name: guests, widget: string, hint: "Número de hóspedes, ex: 2" }
+              - { label: Imagem Principal, name: image, widget: image, hint: "Imagem de capa exibida nos cards" }
+              - label: Galeria de Imagens
                 name: images
                 widget: list
-                field: { label: URL, name: url, widget: string }
+                hint: "Imagens para o carrossel na página de quartos"
+                field: { label: Imagem, name: url, widget: image }
               - label: Características Rápidas
                 name: features
                 widget: list
+                hint: "Lista curta visível no card, ex: Cama king-size, Vista para o jardim"
                 field: { label: Característica, name: feature, widget: string }
-              - { label: Destaque, name: featured, widget: boolean, default: false }
-              - { label: Badge, name: badge, widget: string, required: false }
-              - { label: Check-in, name: checkin, widget: string }
-              - { label: Check-out, name: checkout, widget: string }
+              - { label: Quarto em Destaque, name: featured, widget: boolean, default: false, hint: "Quartos em destaque têm borda dourada e botão principal" }
+              - { label: Badge, name: badge, widget: string, required: false, hint: "Ex: Mais Popular, Vista ao Mar. Deixar vazio para não mostrar." }
+              - { label: Check-in, name: checkin, widget: string, hint: "Ex: 14h00" }
+              - { label: Check-out, name: checkout, widget: string, hint: "Ex: 12h00" }
               - { label: Política de Cancelamento, name: cancelPolicy, widget: string }
-              - label: Comodidades
+              - label: Comodidades Detalhadas
                 name: amenities
                 widget: object
+                hint: "Lista completa visível quando o hóspede clica em 'Ver todos os detalhes'"
                 fields:
                   - label: Quarto
                     name: quarto
@@ -60,7 +64,7 @@ collections:
                     name: tecnologia
                     widget: list
                     field: { label: Item, name: item, widget: string }
-                  - label: Serviços
+                  - label: Serviços Incluídos
                     name: servicos
                     widget: list
                     field: { label: Item, name: item, widget: string }
@@ -75,12 +79,13 @@ collections:
           - label: Imagens
             name: images
             widget: list
+            summary: "{{fields.label}} ({{fields.category}})"
             fields:
-              - { label: ID, name: id, widget: string }
-              - { label: "URL Alta Resolução", name: src, widget: string }
-              - { label: "URL Miniatura", name: thumb, widget: string }
-              - { label: Texto Alternativo, name: alt, widget: string }
-              - { label: Legenda, name: label, widget: string }
+              - { label: ID, name: id, widget: string, hint: "Identificador único, ex: ext-1, qto-2. Não alterar." }
+              - { label: Imagem Alta Resolução, name: src, widget: image }
+              - { label: Miniatura, name: thumb, widget: image, hint: "Versão comprimida para carregamento rápido na grelha" }
+              - { label: Texto Alternativo, name: alt, widget: string, hint: "Descrição para acessibilidade, ex: Vista da piscina do hotel ao pôr do sol" }
+              - { label: Legenda, name: label, widget: string, hint: "Título exibido ao passar o rato na galeria" }
               - label: Categoria
                 name: category
                 widget: select
@@ -89,13 +94,15 @@ collections:
                   - { label: Quartos, value: quartos }
                   - { label: Restaurante & Bar, value: restaurante }
                   - { label: Eventos, value: eventos }
-              - { label: Destaque, name: featured, widget: boolean, default: false }
-          - label: Categorias
+              - { label: Imagem em Destaque, name: featured, widget: boolean, default: false, hint: "Imagens em destaque aparecem primeiro na galeria" }
+          - label: Categorias do Filtro
             name: categories
             widget: list
+            summary: "{{fields.label}}"
+            hint: "Categorias que aparecem nos botões de filtro da galeria"
             fields:
-              - { label: Chave, name: key, widget: string }
-              - { label: Nome, name: label, widget: string }
+              - { label: Chave Interna, name: key, widget: string, hint: "Valor técnico, ex: exterior, quartos. Não alterar." }
+              - { label: Nome Visível, name: label, widget: string }
 
   - name: restaurante
     label: Restaurante
@@ -111,66 +118,75 @@ collections:
               - label: Entradas
                 name: entradas
                 widget: list
+                summary: "{{fields.name}} — Kz {{fields.price}}"
                 fields:
-                  - { label: ID, name: id, widget: string }
-                  - { label: Nome, name: name, widget: string }
+                  - { label: ID, name: id, widget: string, hint: "Identificador único. Não alterar." }
+                  - { label: Nome do Prato, name: name, widget: string }
                   - { label: Descrição, name: desc, widget: text }
-                  - { label: Preço, name: price, widget: string }
-                  - label: Badges
+                  - { label: Preço (AOA), name: price, widget: string, hint: "Apenas o número, ex: 1500" }
+                  - label: Classificações
                     name: badges
                     widget: list
-                    field: { label: Badge, name: badge, widget: string }
+                    hint: "Opções: Tradicional, Vegetariano, Sem Glúten, Premium, Assinatura, Sem Álcool"
+                    field: { label: Classificação, name: badge, widget: string }
               - label: Pratos Principais
                 name: principais
                 widget: list
+                summary: "{{fields.name}} — Kz {{fields.price}}"
                 fields:
-                  - { label: ID, name: id, widget: string }
-                  - { label: Nome, name: name, widget: string }
+                  - { label: ID, name: id, widget: string, hint: "Identificador único. Não alterar." }
+                  - { label: Nome do Prato, name: name, widget: string }
                   - { label: Descrição, name: desc, widget: text }
-                  - { label: Preço, name: price, widget: string }
-                  - { label: Destaque, name: featured, widget: boolean, default: false }
-                  - label: Badges
+                  - { label: Preço (AOA), name: price, widget: string, hint: "Apenas o número, ex: 3500" }
+                  - { label: "Chef's Choice", name: featured, widget: boolean, default: false, hint: "Marca o prato com destaque dourado e etiqueta Chef's Choice" }
+                  - label: Classificações
                     name: badges
                     widget: list
-                    field: { label: Badge, name: badge, widget: string }
+                    hint: "Opções: Tradicional, Vegetariano, Sem Glúten, Premium, Assinatura, Sem Álcool"
+                    field: { label: Classificação, name: badge, widget: string }
               - label: Sobremesas
                 name: sobremesas
                 widget: list
+                summary: "{{fields.name}} — Kz {{fields.price}}"
                 fields:
-                  - { label: ID, name: id, widget: string }
-                  - { label: Nome, name: name, widget: string }
+                  - { label: ID, name: id, widget: string, hint: "Identificador único. Não alterar." }
+                  - { label: Nome da Sobremesa, name: name, widget: string }
                   - { label: Descrição, name: desc, widget: text }
-                  - { label: Preço, name: price, widget: string }
-                  - label: Badges
+                  - { label: Preço (AOA), name: price, widget: string, hint: "Apenas o número, ex: 1200" }
+                  - label: Classificações
                     name: badges
                     widget: list
-                    field: { label: Badge, name: badge, widget: string }
+                    field: { label: Classificação, name: badge, widget: string }
               - label: Cocktails & Bar
                 name: cocktails
                 widget: list
+                summary: "{{fields.name}} — Kz {{fields.price}}"
                 fields:
-                  - { label: ID, name: id, widget: string }
-                  - { label: Nome, name: name, widget: string }
+                  - { label: ID, name: id, widget: string, hint: "Identificador único. Não alterar." }
+                  - { label: Nome do Cocktail, name: name, widget: string }
                   - { label: Descrição, name: desc, widget: text }
-                  - { label: Preço, name: price, widget: string }
-                  - { label: Destaque, name: featured, widget: boolean, default: false }
-                  - label: Badges
+                  - { label: Preço (AOA), name: price, widget: string, hint: "Apenas o número, ex: 800" }
+                  - { label: Cocktail em Destaque, name: featured, widget: boolean, default: false }
+                  - label: Classificações
                     name: badges
                     widget: list
-                    field: { label: Badge, name: badge, widget: string }
-          - label: Horários
+                    field: { label: Classificação, name: badge, widget: string }
+          - label: Horários de Funcionamento
             name: hours
             widget: list
+            summary: "{{fields.meal}} — {{fields.time}}"
             fields:
-              - { label: Refeição, name: meal, widget: string }
-              - { label: Horário, name: time, widget: string }
-              - { label: Dias, name: days, widget: string }
-          - label: Destaques
+              - { label: Refeição, name: meal, widget: string, hint: "Ex: Pequeno-Almoço, Almoço, Jantar" }
+              - { label: Horário, name: time, widget: string, hint: "Ex: 07h00 – 10h30" }
+              - { label: Dias, name: days, widget: string, hint: "Ex: Segunda a Domingo, Segunda a Sexta" }
+          - label: Destaques do Espaço
             name: highlights
             widget: list
+            summary: "{{fields.label}}: {{fields.value}}"
+            hint: "Estatísticas visíveis na secção de informações do restaurante"
             fields:
-              - { label: Etiqueta, name: label, widget: string }
-              - { label: Valor, name: value, widget: string }
+              - { label: Etiqueta, name: label, widget: string, hint: "Ex: Capacidade, Mesas, Anos de Experiência" }
+              - { label: Valor, name: value, widget: string, hint: "Ex: 80 lugares, 18 mesas" }
 
   - name: eventos
     label: Eventos
@@ -182,61 +198,70 @@ collections:
           - label: Espaços
             name: spaces
             widget: list
+            summary: "{{fields.name}}"
             fields:
-              - { label: ID, name: id, widget: string }
-              - { label: Nome, name: name, widget: string }
+              - { label: ID, name: id, widget: string, hint: "Identificador único. Não alterar." }
+              - { label: Nome do Espaço, name: name, widget: string }
               - { label: Descrição, name: desc, widget: text }
-              - { label: Área, name: size, widget: string }
-              - { label: "Imagem (URL)", name: image, widget: string }
-              - { label: Badge, name: badge, widget: string }
-              - label: Capacidade
+              - { label: Área, name: size, widget: string, hint: "Ex: 200 m²" }
+              - { label: Imagem, name: image, widget: image }
+              - { label: Badge, name: badge, widget: string, hint: "Ex: Mais Reservado, Vista Panorâmica" }
+              - label: Capacidade por Configuração
                 name: capacity
                 widget: object
+                hint: "Número máximo de pessoas consoante a disposição. Deixar vazio se não aplicável."
                 fields:
-                  - { label: Teatro, name: teatro, widget: number, required: false, value_type: int }
-                  - { label: Banquete, name: banquete, widget: number, required: false, value_type: int }
-                  - { label: Cocktail, name: cocktail, widget: number, required: false, value_type: int }
-                  - { label: Escola, name: escola, widget: number, required: false, value_type: int }
-              - label: Características
+                  - { label: "Teatro (filas de cadeiras)", name: teatro, widget: number, required: false, value_type: int }
+                  - { label: "Banquete (mesas redondas)", name: banquete, widget: number, required: false, value_type: int }
+                  - { label: "Cocktail / Pé", name: cocktail, widget: number, required: false, value_type: int }
+                  - { label: "Escola (secretárias)", name: escola, widget: number, required: false, value_type: int }
+              - label: Características do Espaço
                 name: features
                 widget: list
                 field: { label: Característica, name: feature, widget: string }
           - label: Tipos de Evento
             name: eventTypes
             widget: list
+            summary: "{{fields.name}}"
             fields:
-              - { label: ID, name: id, widget: string }
+              - { label: ID, name: id, widget: string, hint: "Identificador único. Não alterar." }
               - label: Ícone
                 name: icon
                 widget: select
-                options: [Briefcase, Mic, Heart, PartyPopper]
-              - { label: Nome, name: name, widget: string }
+                options:
+                  - { label: "Pasta — Negócios / Corporativo", value: Briefcase }
+                  - { label: "Microfone — Conferências / Palestras", value: Mic }
+                  - { label: "Coração — Casamentos / Celebrações", value: Heart }
+                  - { label: "Balões — Festas / Eventos Sociais", value: PartyPopper }
+              - { label: Nome do Tipo de Evento, name: name, widget: string }
               - { label: Descrição, name: desc, widget: text }
-              - label: Incluído
+              - label: O Que Está Incluído
                 name: items
                 widget: list
-                field: { label: Item, name: item, widget: string }
-          - label: Equipamento
+                field: { label: Item incluído, name: item, widget: string }
+          - label: Equipamento Disponível
             name: equipment
             widget: list
+            summary: "{{fields.name}}"
             fields:
-              - { label: Nome, name: name, widget: string }
-              - { label: Descrição, name: desc, widget: string }
+              - { label: Nome do Equipamento, name: name, widget: string }
+              - { label: Descrição / Quantidade, name: desc, widget: string, hint: "Ex: 200 cadeiras, 1 sistema de som profissional" }
           - label: Pacotes
             name: packages
             widget: list
+            summary: "{{fields.name}} — Kz {{fields.price}}"
             fields:
-              - { label: ID, name: id, widget: string }
-              - { label: Nome, name: name, widget: string }
-              - { label: Preço, name: price, widget: string }
-              - { label: Unidade, name: unit, widget: string }
+              - { label: ID, name: id, widget: string, hint: "Identificador único. Não alterar." }
+              - { label: Nome do Pacote, name: name, widget: string }
+              - { label: Preço (AOA), name: price, widget: string, hint: "Apenas o número, ex: 350000" }
+              - { label: Unidade, name: unit, widget: string, hint: "Ex: por evento, por pessoa, por hora" }
               - { label: Descrição, name: desc, widget: string }
-              - { label: Destaque, name: highlight, widget: boolean, default: false }
-              - { label: Badge, name: badge, widget: string, required: false }
-              - label: Incluído
+              - { label: Pacote em Destaque, name: highlight, widget: boolean, default: false, hint: "O pacote em destaque aparece com visual diferenciado" }
+              - { label: Badge, name: badge, widget: string, required: false, hint: "Ex: Mais Popular, Recomendado. Deixar vazio para não mostrar." }
+              - label: O Que Está Incluído
                 name: includes
                 widget: list
-                field: { label: Item, name: item, widget: string }
+                field: { label: Item incluído, name: item, widget: string }
 
   - name: servicos
     label: Serviços
@@ -248,41 +273,44 @@ collections:
           - label: Categorias
             name: categories
             widget: list
+            summary: "{{fields.label}}"
             fields:
-              - { label: ID, name: id, widget: string }
-              - { label: Nome, name: label, widget: string }
+              - { label: ID, name: id, widget: string, hint: "Identificador único. Não alterar." }
+              - { label: Nome da Categoria, name: label, widget: string }
               - { label: Descrição, name: desc, widget: text }
-              - { label: "Imagem (URL)", name: image, widget: string }
+              - { label: Imagem, name: image, widget: image }
               - label: Serviços
                 name: services
                 widget: list
+                summary: "{{fields.name}}"
                 fields:
-                  - { label: ID, name: id, widget: string }
+                  - { label: ID, name: id, widget: string, hint: "Identificador único. Não alterar." }
                   - label: Ícone
                     name: icon
                     widget: select
                     options:
-                      - Utensils
-                      - Wine
-                      - BellRing
-                      - Presentation
-                      - Users
-                      - Briefcase
-                      - Dumbbell
-                      - Trees
-                      - Wifi
-                      - Car
-                      - Shirt
-                      - Lock
-                      - CreditCard
-                      - Clock
-                      - ArrowUpDown
-                      - Plane
-                  - { label: Nome, name: name, widget: string }
+                      - { label: "Talheres — Restaurante / Alimentação", value: Utensils }
+                      - { label: "Copo de Vinho — Bar / Bebidas", value: Wine }
+                      - { label: "Campainha — Concierge / Recepção", value: BellRing }
+                      - { label: "Ecrã — Apresentações / Salas", value: Presentation }
+                      - { label: "Pessoas — Grupos / Reuniões", value: Users }
+                      - { label: "Pasta — Negócios / Escritório", value: Briefcase }
+                      - { label: "Halteres — Ginásio / Fitness", value: Dumbbell }
+                      - { label: "Árvores — Jardim / Exterior", value: Trees }
+                      - { label: "Wi-Fi — Internet Sem Fios", value: Wifi }
+                      - { label: "Carro — Estacionamento / Transfers", value: Car }
+                      - { label: "Camisa — Lavandaria / Engomadoria", value: Shirt }
+                      - { label: "Cadeado — Cofre / Segurança", value: Lock }
+                      - { label: "Cartão — Pagamentos / Facturação", value: CreditCard }
+                      - { label: "Relógio — Horário / Disponibilidade 24h", value: Clock }
+                      - { label: "Setas Verticais — Elevador / Acessibilidade", value: ArrowUpDown }
+                      - { label: "Avião — Aeroporto / Transfers", value: Plane }
+                  - { label: Nome do Serviço, name: name, widget: string }
                   - { label: Descrição, name: desc, widget: text }
-                  - { label: Link, name: link, widget: string, required: false }
-                  - { label: "Texto do Link", name: linkLabel, widget: string, required: false }
-                  - label: Detalhes
+                  - { label: URL do Link, name: link, widget: string, required: false, hint: "Ex: /contactos — deixar vazio para não mostrar link" }
+                  - { label: Texto do Link, name: linkLabel, widget: string, required: false, hint: "Ex: Reservar, Saber mais, Contactar" }
+                  - label: Detalhes Adicionais
                     name: details
                     widget: list
+                    hint: "Bullets com informação extra sobre o serviço"
                     field: { label: Detalhe, name: detail, widget: string }

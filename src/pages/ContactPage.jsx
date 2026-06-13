@@ -12,7 +12,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Morada',
-    lines: ['Bairro Morro Bento, Rua dos Generais S/N', 'Paralela à Av. Pedro de Castro Van-Dúnen "Loy"', 'Luanda, Angola'],
+    lines: ['Bairro Morro Bento, Rua dos Generais S/N', 'Distrito do Samba, Luanda, Angola'],
     action: null,
   },
   {

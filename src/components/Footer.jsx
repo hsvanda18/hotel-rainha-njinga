@@ -182,7 +182,7 @@ export default function Footer() {
                 <MapPin size={14} className="text-gold/60 flex-shrink-0 mt-0.5" />
                 <p className="font-inter text-sm text-njinga-white/50 leading-relaxed">
                   Bairro Morro Bento, Rua dos Generais S/N,
-                  Luanda, Angola
+                  Distrito do Samba, Luanda, Angola
                 </p>
               </li>
               <li className="flex gap-3">

@@ -22,25 +22,25 @@ function useVisible(threshold = 0.15) {
 }
 
 const milestones = [
-  { year: '2008', title: 'Fundação', desc: 'O Hotel Rainha Njinga abre as portas no bairro de Morro Bento, com 30 quartos e uma visão clara: elevar a hospitalidade em Luanda.' },
-  { year: '2012', title: 'Expansão', desc: 'Renovação completa e expansão para 52 quartos, incluindo a Suite Njinga Premium e a abertura do Restaurante Njinga.' },
-  { year: '2016', title: 'Reconhecimento', desc: 'Classificação oficial de 3 estrelas pelo Ministério do Turismo de Angola. Inauguração do Bar & Lounge e da Sala de Eventos.' },
-  { year: '2020', title: 'Resiliência', desc: 'Adaptação exemplar durante a pandemia, mantendo os padrões de excelência e reinventando os serviços de forma segura.' },
-  { year: '2024', title: 'Hoje', desc: 'Referência da hospitalidade em Luanda, com mais de 10.000 hóspedes por ano e uma equipa de 45 profissionais dedicados.' },
+  { year: '2016', title: 'Fundação', desc: 'A 23 de maio de 2016, o Hotel Rainha Njinga abre as portas no Bairro Morro Bento, Rua dos Generais, Distrito do Samba, com a missão de elevar a hospitalidade em Luanda.' },
+  { year: '2018', title: 'Crescimento', desc: 'Consolidação da equipa e ampliação dos serviços. Abertura do Restaurante Njinga e do Bar & Lounge, reforçando a oferta gastronómica do hotel.' },
+  { year: '2020', title: 'Resiliência', desc: 'Adaptação exemplar durante a pandemia, mantendo os padrões de excelência e reinventando os serviços de forma segura para hóspedes e colaboradores.' },
+  { year: '2022', title: 'Expansão', desc: 'Renovação dos espaços comuns e lançamento da Sala de Eventos e Reuniões, tornando o hotel uma referência para eventos corporativos em Luanda.' },
+  { year: '2026', title: 'Hoje', desc: 'Referência da hospitalidade em Luanda, com 32 profissionais dedicados e a missão de fazer do hotel uma extensão do lar de cada hóspede.' },
 ]
 
 const values = [
-  { icon: Heart, title: 'Autenticidade', desc: 'Cada detalhe do hotel reflete a cultura e a identidade angolana, desde a decoração à gastronomia, sem abdicar do conforto moderno.' },
-  { icon: Leaf, title: 'Sustentabilidade', desc: 'Comprometidos com práticas responsáveis: fornecedores locais, redução de resíduos e energia, e apoio às comunidades de Luanda.' },
-  { icon: Lightbulb, title: 'Excelência', desc: 'Superamos as expectativas a cada estadia. A formação contínua da nossa equipa garante um serviço impecável e personalizado.' },
-  { icon: Handshake, title: 'Hospitalidade', desc: 'Receber bem é a nossa vocação. Cada hóspede é tratado como convidado de honra, com atenção genuína e calidez angolana.' },
+  { icon: Shield, title: 'Profissionalismo', desc: 'Uma equipa de 32 profissionais altamente qualificados, empenhados em prestar um serviço de excelência em todos os departamentos do hotel.' },
+  { icon: Lightbulb, title: 'Inovação', desc: 'Procuramos constantemente novas formas de melhorar a experiência dos nossos hóspedes, adaptando os serviços às suas necessidades.' },
+  { icon: Handshake, title: 'Ética & Responsabilidade', desc: 'Agimos com transparência e responsabilidade social e ambiental, contribuindo positivamente para a comunidade de Luanda e para Angola.' },
+  { icon: Award, title: 'Excelência', desc: 'A excelência e a qualidade dos recursos humanos são os pilares que guiam cada decisão e cada interação com os nossos hóspedes.' },
 ]
 
 const team = [
   {
-    name: 'António Sebastião',
-    role: 'Director Geral',
-    bio: '20 anos de experiência na hotelaria em Angola e Portugal. Liderou a expansão do hotel e a classificação de 3 estrelas.',
+    name: 'Dr. Pedro Júnior',
+    role: 'Sócio Gerente',
+    bio: 'Economista e contabilista certificado, com larga experiência e grande aptidão para o negócio hoteleiro. Fundador e responsável máximo do Hotel Rainha Njinga desde 2016.',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&auto=format&fit=crop&facepad=3&faces=1',
   },
   {
@@ -66,10 +66,10 @@ const team = [
 const stats = [
   { value: '52', label: 'Quartos' },
   { value: '3', label: 'Estrelas' },
-  { value: '45', label: 'Colaboradores' },
+  { value: '32', label: 'Colaboradores' },
   { value: '10k+', label: 'Hóspedes / Ano' },
   { value: '4.9', label: 'Avaliação Média' },
-  { value: '16', label: 'Anos de História' },
+  { value: '10', label: 'Anos de História' },
 ]
 
 export default function AboutPage() {
@@ -118,7 +118,7 @@ export default function AboutPage() {
               }`}
             >
               Inspirados pela grandeza da Rainha Njinga Mbande, combinamos a rica herança cultural
-              de Angola com o conforto moderno e a hospitalidade que nos define há 16 anos.
+              de Angola com o conforto moderno e a hospitalidade que nos define desde 2016.
             </p>
 
             <div
@@ -128,7 +128,7 @@ export default function AboutPage() {
             >
               {[
                 { icon: Star, label: '3 Estrelas' },
-                { icon: Award, label: 'Desde 2008' },
+                { icon: Award, label: 'Desde 2016' },
                 { icon: MapPin, label: 'Morro Bento, Luanda' },
               ].map(({ icon: Icon, label }) => (
                 <div key={label} className="flex items-center gap-2 text-njinga-white/50">
@@ -207,16 +207,11 @@ export default function AboutPage() {
                 à sua disposição
               </h2>
               <p className="font-inter text-njinga-white/60 text-base leading-relaxed mb-5">
-                Fundado em 2008, o Hotel Rainha Njinga nasceu de um sonho simples: criar um espaço em Luanda
-                onde a hospitalidade angolana autêntica encontrasse o conforto internacional. O nome homenageia
-                a Rainha Njinga Mbande, símbolo de força, diplomacia e identidade angolana.
+                Fundado a <strong className="text-gold font-semibold">23 de maio de 2016</strong>, o Hotel Rainha Njinga nasceu com a missão de proporcionar serviços de hotelaria com excelência de qualidade, no Bairro Morro Bento, Distrito do Samba, Luanda. O nome homenageia a Rainha Njinga Mbande, símbolo de força, diplomacia e identidade angolana.
               </p>
               <p className="font-inter text-njinga-white/60 text-base leading-relaxed mb-8">
-                Ao longo de 16 anos, crescemos de 30 para{' '}
-                <strong className="text-gold font-semibold">52 quartos</strong>, abrimos o nosso premiado
-                restaurante, expandimos para eventos corporativos e tornámo-nos uma referência incontornável
-                da hotelaria em Angola, recebendo mais de{' '}
-                <strong className="text-gold font-semibold">10.000 hóspedes por ano</strong> de todo o mundo.
+                Ao longo de 10 anos, crescemos e consolidámos a nossa posição no mercado, com{' '}
+                <strong className="text-gold font-semibold">32 profissionais</strong> dedicados e uma oferta completa que inclui restaurante, bar, sala de eventos e serviços de excelência para hóspedes de negócios e lazer.
               </p>
 
               <div className="grid grid-cols-3 gap-0 py-6 border-y border-gold/20 mb-8">
@@ -331,11 +326,11 @@ export default function AboutPage() {
             {[
               {
                 label: 'Missão',
-                text: 'Proporcionar uma hospitalidade angolana autêntica e de excelência, criando experiências memoráveis que combinem o conforto moderno com a riqueza cultural de Angola.',
+                text: 'Proporcionar serviços de hotelaria com excelência de qualidade, visando a satisfação dos clientes, contribuindo para a valorização dos colaboradores, promovendo benefícios à sociedade e resultados para os proprietários.',
               },
               {
                 label: 'Visão',
-                text: 'Ser o hotel de referência em Luanda, reconhecido pela qualidade do serviço, pelo impacto positivo na comunidade e por ser o melhor embaixador da cultura angolana no mundo.',
+                text: 'Ser o mais bem-sucedido e respeitado no sector de prestação de serviço de hospedagem de Luanda na sua categoria, fazendo deste hotel uma extensão do seu lar, promovendo conforto, segurança e qualidade.',
               },
             ].map((item, i) => (
               <div
@@ -386,7 +381,7 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <p className="section-subtitle mb-4">✦ Cronologia ✦</p>
             <h2 className="section-title mb-4">
-              16 Anos de{' '}
+              10 Anos de{' '}
               <span className="text-gold italic">Excelência</span>
             </h2>
             <div className="section-divider mt-8">
@@ -439,7 +434,7 @@ export default function AboutPage() {
               <span className="text-gold italic">Equipa</span>
             </h2>
             <p className="font-inter text-njinga-white/50 max-w-lg mx-auto text-sm">
-              45 profissionais dedicados a fazer de cada estadia uma experiência única.
+              32 profissionais dedicados a fazer de cada estadia uma experiência única.
               Conheça quem lidera o Hotel Rainha Njinga.
             </p>
             <div className="section-divider mt-8">
@@ -501,7 +496,7 @@ export default function AboutPage() {
                   { icon: MapPin, title: 'Localização Privilegiada', desc: 'No coração de Morro Bento, a 20 minutos do aeroporto e próximo dos centros de negócios.' },
                   { icon: Shield, title: 'Segurança & Conforto', desc: '52 quartos com segurança 24h, cofre individual e todas as comodidades para uma estadia tranquila.' },
                   { icon: Clock, title: 'Serviço 24 Horas', desc: 'Recepção, room service e assistência disponíveis a qualquer hora do dia ou da noite.' },
-                  { icon: Users, title: 'Equipa Dedicada', desc: '45 colaboradores formados para oferecer um serviço personalizado e caloroso.' },
+                  { icon: Users, title: 'Equipa Dedicada', desc: '32 colaboradores formados para oferecer um serviço personalizado e caloroso.' },
                 ].map((item) => {
                   const Icon = item.icon
                   return (
