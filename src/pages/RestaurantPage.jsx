@@ -56,7 +56,7 @@ function MenuItem({ item }) {
         )}
       </div>
       <p className="font-playfair text-lg font-bold text-gold flex-shrink-0 pt-0.5">
-        ${item.price}
+        Kz {item.price}
       </p>
     </div>
   )
@@ -262,7 +262,7 @@ export default function RestaurantPage() {
           </div>
 
           <p className="font-inter text-[11px] text-njinga-white/25 text-center mt-10">
-            Os preços estão em USD e não incluem IVA. Ementa sujeita a alterações sazonais.
+            Os preços estão em AOA e não incluem IVA. Ementa sujeita a alterações sazonais.
           </p>
         </div>
       </section>

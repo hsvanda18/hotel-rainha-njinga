@@ -374,7 +374,7 @@ export default function EventsPage() {
                     ) : (
                       <>
                         <p className="font-inter text-xs text-njinga-white/35">A partir de</p>
-                        <p className="font-playfair text-3xl font-bold text-gold">${pkg.price}</p>
+                        <p className="font-playfair text-3xl font-bold text-gold">Kz {pkg.price}</p>
                       </>
                     )}
                   </div>
@@ -416,7 +416,7 @@ export default function EventsPage() {
           </div>
 
           <p className="font-inter text-[11px] text-njinga-white/25 text-center mt-8">
-            Preços em USD, sujeitos a IVA. Pacotes personalizados disponíveis mediante consulta.
+            Preços em AOA, sujeitos a IVA. Pacotes personalizados disponíveis mediante consulta.
           </p>
         </div>
       </section>

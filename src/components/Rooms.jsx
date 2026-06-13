@@ -42,7 +42,7 @@ function RoomCard({ room, index, visible }) {
         <div className="absolute bottom-4 right-4 text-right">
           <p className="font-inter text-[10px] text-njinga-white/60 uppercase tracking-wider mb-0.5">A partir de</p>
           <p className="font-playfair text-3xl font-bold text-gold leading-none drop-shadow-lg">
-            ${room.price}
+            Kz {room.price}
             <span className="font-inter text-sm font-normal text-njinga-white/50">/noite</span>
           </p>
         </div>
