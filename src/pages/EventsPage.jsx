@@ -7,7 +7,9 @@ import {
 } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { spaces, eventTypes, equipment, packages } from '../data/events'
+import eventsData from '../data/events.json'
+
+const { spaces, eventTypes, equipment, packages } = eventsData
 
 const EVENT_ICONS = { Briefcase, Mic, Heart, PartyPopper }
 

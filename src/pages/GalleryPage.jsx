@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom'
 import { X, ZoomIn, ChevronLeft, ChevronRight, Images } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { galleryImages, categories } from '../data/gallery'
+import galleryData from '../data/gallery.json'
+
+const { images: galleryImages, categories } = galleryData
 
 function Lightbox({ images, index, onClose, onPrev, onNext }) {
   const img = images[index]

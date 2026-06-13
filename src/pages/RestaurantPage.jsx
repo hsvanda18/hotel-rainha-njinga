@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { menu, hours, highlights } from '../data/restaurant'
+import { menu, hours, highlights } from '../data/restaurant.json'
 
 const TABS = [
   { key: 'entradas', label: 'Entradas', icon: Utensils },

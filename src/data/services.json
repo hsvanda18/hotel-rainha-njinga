@@ -1,0 +1,180 @@
+{
+  "categories": [
+    {
+      "id": "alimentacao",
+      "label": "Alimentação & Bebidas",
+      "desc": "Do pequeno-almoço ao jantar de gala, a gastronomia do Hotel Rainha Njinga é uma experiência em si mesma.",
+      "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&auto=format&fit=crop",
+      "services": [
+        {
+          "id": "restaurante",
+          "icon": "Utensils",
+          "name": "Restaurante Njinga",
+          "desc": "Cozinha angolana e internacional sob a direcção do Chef João Kimbembe. Aberto ao pequeno-almoço, almoço e jantar todos os dias.",
+          "details": ["Pequeno-Almoço: 06:30–10:30", "Almoço: 12:00–15:00", "Jantar: 19:00–23:00", "Capacidade: 80 lugares + 30 esplanada"],
+          "link": "/restaurante",
+          "linkLabel": "Ver Ementa"
+        },
+        {
+          "id": "bar",
+          "icon": "Wine",
+          "name": "Bar & Lounge",
+          "desc": "O coração social do hotel. Cocktails de autor, vinhos seleccionados e música ao vivo às Sextas e Sábados.",
+          "details": ["Aberto: 11:00–01:00", "Happy Hour: 18:00–20:00 (20% off)", "Música ao vivo: Sex. e Sáb. 21h", "Cocktails de assinatura Njinga"],
+          "link": "/restaurante",
+          "linkLabel": "Ver Cocktails"
+        },
+        {
+          "id": "roomservice",
+          "icon": "BellRing",
+          "name": "Room Service 24h",
+          "desc": "Ementa completa disponível a qualquer hora, directamente no seu quarto. Serviço discreto e rápido.",
+          "details": ["Disponível 24 horas por dia", "Ementa de refeições completas", "Bebidas e snacks", "Pedido por telefone ou app"],
+          "link": null,
+          "linkLabel": null
+        }
+      ]
+    },
+    {
+      "id": "negocios",
+      "label": "Eventos & Negócios",
+      "desc": "Infraestrutura completa para reuniões, conferências, apresentações e eventos corporativos de excelência.",
+      "image": "https://images.unsplash.com/photo-1462826303086-329426d1aef5?w=900&q=80&auto=format&fit=crop",
+      "services": [
+        {
+          "id": "reunioes",
+          "icon": "Presentation",
+          "name": "Sala de Reuniões",
+          "desc": "Sala executiva para até 30 pessoas, equipada com videoconferência 4K, ecrã interativo e coffee break incluído.",
+          "details": ["Capacidade: até 30 pessoas", "Videoconferência HD", "Ecrã interativo 75\"", "Coffee break incluído"],
+          "link": "/eventos",
+          "linkLabel": "Ver Espaços"
+        },
+        {
+          "id": "salao",
+          "icon": "Users",
+          "name": "Salão Njinga",
+          "desc": "O nosso maior espaço para eventos: gala dinners, casamentos, conferências e recepções até 250 pessoas.",
+          "details": ["Capacidade: até 250 pessoas", "280 m² de área", "Sistema de som profissional", "Projeção 4K e palco"],
+          "link": "/eventos",
+          "linkLabel": "Ver Pacotes"
+        },
+        {
+          "id": "business",
+          "icon": "Briefcase",
+          "name": "Business Center",
+          "desc": "Espaço de trabalho partilhado com impressora, scanner, Wi-Fi dedicado e secretária disponível para assistência.",
+          "details": ["Impressora & scanner a cores", "Wi-Fi de alta velocidade", "Secretária de apoio disponível", "Acesso 24 horas para hóspedes"],
+          "link": null,
+          "linkLabel": null
+        }
+      ]
+    },
+    {
+      "id": "bemestar",
+      "label": "Bem-estar & Lazer",
+      "desc": "Espaços pensados para que possa relaxar, manter a rotina de exercício e desfrutar do melhor de Luanda.",
+      "image": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=900&q=80&auto=format&fit=crop",
+      "services": [
+        {
+          "id": "ginasio",
+          "icon": "Dumbbell",
+          "name": "Ginásio",
+          "desc": "Equipamento de cardio e musculação moderno, disponível para todos os hóspedes sem custo adicional.",
+          "details": ["Aberto: 06:00–22:00", "Cardio e musculação", "Acesso gratuito para hóspedes", "Toalhas fornecidas"],
+          "link": null,
+          "linkLabel": null
+        },
+        {
+          "id": "esplanada",
+          "icon": "Trees",
+          "name": "Esplanada & Jardim",
+          "desc": "Espaço ao ar livre com vista privilegiada sobre Luanda, ideal para refeições, cocktails e eventos nocturnos.",
+          "details": ["Vista panorâmica de Luanda", "Bar exterior disponível", "Iluminação ambiente", "Capacidade: 150 pessoas (cocktail)"],
+          "link": "/eventos",
+          "linkLabel": "Reservar Espaço"
+        }
+      ]
+    },
+    {
+      "id": "comodidades",
+      "label": "Comodidades",
+      "desc": "Todos os detalhes pensados para que a sua estadia seja confortável, segura e sem preocupações.",
+      "image": "https://images.unsplash.com/photo-1596436889106-be35e843f974?w=900&q=80&auto=format&fit=crop",
+      "services": [
+        {
+          "id": "wifi",
+          "icon": "Wifi",
+          "name": "Wi-Fi de Alta Velocidade",
+          "desc": "Internet de fibra óptica em todo o hotel, com rede dedicada para eventos e reuniões.",
+          "details": ["Cobertura total em 3 pisos", "Rede dedicada para eventos", "Acesso gratuito para hóspedes", "Suporte técnico disponível"],
+          "link": null,
+          "linkLabel": null
+        },
+        {
+          "id": "estacionamento",
+          "icon": "Car",
+          "name": "Estacionamento Privativo",
+          "desc": "Parque privativo e vigiado com câmeras de segurança 24h. Inclui opção de valet parking.",
+          "details": ["Videovigilância 24 horas", "Acesso com cartão de hóspede", "Valet parking disponível", "Gratuito para hóspedes"],
+          "link": null,
+          "linkLabel": null
+        },
+        {
+          "id": "lavandaria",
+          "icon": "Shirt",
+          "name": "Lavandaria",
+          "desc": "Serviço de lavagem, engomagem e limpeza a seco, com entrega no mesmo dia para pedidos até às 09h.",
+          "details": ["Entrega no mesmo dia (pedidos até 09h)", "Limpeza a seco disponível", "Engomagem incluída", "Levantamento no quarto"],
+          "link": null,
+          "linkLabel": null
+        },
+        {
+          "id": "cofre",
+          "icon": "Lock",
+          "name": "Cofre Individual",
+          "desc": "Cofre digital de segurança em todos os quartos, com capacidade para laptop, documentos e valores.",
+          "details": ["Em todos os 52 quartos", "Capacidade para laptop", "Código pessoal configurável", "Suporte 24h disponível"],
+          "link": null,
+          "linkLabel": null
+        },
+        {
+          "id": "atm",
+          "icon": "CreditCard",
+          "name": "ATM / Multibanco",
+          "desc": "Caixa automático disponível no lobby do hotel, aceita cartões Visa, Mastercard e cartões angolanos.",
+          "details": ["No lobby, disponível 24h", "Visa, Mastercard e cartões nacionais", "Levantamentos em AOA e USD", "Câmbio de divisas no balcão"],
+          "link": null,
+          "linkLabel": null
+        },
+        {
+          "id": "recepcao",
+          "icon": "Clock",
+          "name": "Recepção 24 Horas",
+          "desc": "A nossa equipa está sempre disponível para check-in tardio, informações, reservas e qualquer necessidade.",
+          "details": ["Disponível 24h / 7 dias", "Check-in e check-out flexível", "Concierge e informações turísticas", "Fluente em PT, EN e FR"],
+          "link": null,
+          "linkLabel": null
+        },
+        {
+          "id": "elevador",
+          "icon": "ArrowUpDown",
+          "name": "Elevador",
+          "desc": "Elevador panorâmico com acesso a todos os pisos, incluindo cobertura e esplanada.",
+          "details": ["Acesso a 3 pisos + cobertura", "Capacidade para 8 pessoas", "Certificação anual", "Acesso para mobilidade reduzida"],
+          "link": null,
+          "linkLabel": null
+        },
+        {
+          "id": "transfer",
+          "icon": "Plane",
+          "name": "Transfer Aeroporto",
+          "desc": "Serviço de transfer entre o Aeroporto Internacional de Luanda e o hotel, disponível mediante reserva prévia.",
+          "details": ["Reserva com 24h de antecedência", "Viatura com ar condicionado", "Motorista profissional", "Disponível 24 horas"],
+          "link": null,
+          "linkLabel": null
+        }
+      ]
+    }
+  ]
+}

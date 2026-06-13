@@ -1,0 +1,121 @@
+{
+  "spaces": [
+    {
+      "id": "njinga",
+      "name": "Salão Njinga",
+      "desc": "O nosso espaço principal, com ampla área para eventos de grande envergadura. Ideal para conferências, gala dinners, casamentos e recepções corporativas de prestígio.",
+      "capacity": {
+        "teatro": 200,
+        "banquete": 120,
+        "cocktail": 250,
+        "escola": 100
+      },
+      "size": "280 m²",
+      "image": "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1200&q=80&auto=format&fit=crop",
+      "features": ["Luz natural", "Sistema de som profissional", "Projeção 4K", "Ar condicionado", "Palco removível", "Acesso direto ao jardim"],
+      "badge": "Maior espaço"
+    },
+    {
+      "id": "executiva",
+      "name": "Sala Executiva",
+      "desc": "Ambiente privativo e sofisticado para reuniões de direcção, apresentações a clientes e sessões de trabalho que exigem concentração e discrição.",
+      "capacity": {
+        "teatro": 30,
+        "banquete": null,
+        "cocktail": 40,
+        "escola": 20
+      },
+      "size": "60 m²",
+      "image": "https://images.unsplash.com/photo-1462826303086-329426d1aef5?w=1200&q=80&auto=format&fit=crop",
+      "features": ["Videoconferência HD", "Ecrã interativo 75\"", "Quadro branco digital", "Coffee break incluído", "Impressora & scanner", "Luz regulável"],
+      "badge": "Reuniões"
+    },
+    {
+      "id": "esplanada",
+      "name": "Esplanada & Jardim",
+      "desc": "Espaço ao ar livre com vista privilegiada sobre Luanda. Perfeito para cocktails de boas-vindas, jantares ao ar livre e eventos nocturnos com ambiente único.",
+      "capacity": {
+        "teatro": null,
+        "banquete": 80,
+        "cocktail": 150,
+        "escola": null
+      },
+      "size": "400 m²",
+      "image": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1200&q=80&auto=format&fit=crop",
+      "features": ["Vista panorâmica", "Iluminação ambiente", "Sistema de som exterior", "Tendas disponíveis", "Bar móvel", "Área de fotos"],
+      "badge": "Ao ar livre"
+    }
+  ],
+  "eventTypes": [
+    {
+      "id": "corporate",
+      "icon": "Briefcase",
+      "name": "Reuniões Corporativas",
+      "desc": "Ambientes equipados para reuniões de equipa, apresentações a investidores e sessões de formação.",
+      "items": ["Videoconferência", "Coffee break & almoço de trabalho", "Material de escritório", "Impressão e digitalização", "Estacionamento VIP"]
+    },
+    {
+      "id": "conference",
+      "icon": "Mic",
+      "name": "Conferências & Seminários",
+      "desc": "Infraestrutura completa para eventos académicos, lançamentos de produto e congressos profissionais.",
+      "items": ["Sistema de tradução simultânea", "Registo de participantes", "Painel de moderação", "Streaming ao vivo", "Catering para coffee breaks"]
+    },
+    {
+      "id": "wedding",
+      "icon": "Heart",
+      "name": "Casamentos & Recepções",
+      "desc": "O cenário perfeito para o dia mais especial. Cuidamos de cada detalhe para que a sua celebração seja inesquecível.",
+      "items": ["Decoração personalizada", "Jantar de gala", "Open bar", "Música ao vivo", "Suite nupcial incluída"]
+    },
+    {
+      "id": "social",
+      "icon": "PartyPopper",
+      "name": "Eventos Sociais & Privados",
+      "desc": "Aniversários, celebrações familiares, festas de final de ano e qualquer ocasião especial que mereça um espaço de excelência.",
+      "items": ["Menu personalizado", "Decoração temática", "DJ ou música ao vivo", "Fotografia profissional", "Serviço de bar"]
+    }
+  ],
+  "equipment": [
+    { "name": "Projetor 4K", "desc": "Alta resolução, ideal para apresentações e cinema" },
+    { "name": "Ecrã Gigante", "desc": "Ecrã motorizado de 5 metros para grandes apresentações" },
+    { "name": "Sistema de Som", "desc": "Colunas profissionais com microfones com e sem fio" },
+    { "name": "Videoconferência", "desc": "Câmara 4K e plataformas Zoom, Teams e Meet" },
+    { "name": "Wi-Fi Dedicado", "desc": "Rede exclusiva de alta capacidade para eventos" },
+    { "name": "Iluminação Cénica", "desc": "Controlo total de luz ambiente e palco" },
+    { "name": "Flipcharts & Quadros", "desc": "Quadros brancos e flipcharts em todos os espaços" },
+    { "name": "Suporte Técnico", "desc": "Técnico de audiovisual presente durante todo o evento" }
+  ],
+  "packages": [
+    {
+      "id": "essential",
+      "name": "Essencial",
+      "price": "350",
+      "unit": "meio-dia",
+      "desc": "Para reuniões de trabalho e pequenas apresentações.",
+      "includes": ["Sala Executiva até 4h", "Wi-Fi dedicado", "Coffee break (1x)", "Projetor & ecrã", "Água e sumos", "Bloco de notas e canetas"],
+      "highlight": false,
+      "badge": null
+    },
+    {
+      "id": "business",
+      "name": "Business",
+      "price": "680",
+      "unit": "dia completo",
+      "desc": "A escolha certa para conferências e formações.",
+      "includes": ["Sala à escolha até 8h", "Wi-Fi dedicado", "Coffee break (2x) + almoço", "Equipamento audiovisual completo", "Suporte técnico", "Secretária de apoio", "Estacionamento incluído"],
+      "highlight": true,
+      "badge": "Mais escolhido"
+    },
+    {
+      "id": "prestige",
+      "name": "Prestígio",
+      "price": "Sob consulta",
+      "unit": "personalizado",
+      "desc": "Eventos únicos com serviço completo e exclusivo.",
+      "includes": ["Salão Njinga ou Esplanada", "Catering personalizado", "Decoração temática", "Coordenador de eventos dedicado", "Serviço de bar open", "Entretenimento ao vivo", "Fotografia profissional"],
+      "highlight": false,
+      "badge": null
+    }
+  ]
+}

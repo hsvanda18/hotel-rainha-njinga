@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BedDouble, Users, Maximize2, Wifi, ChevronRight, Check } from 'lucide-react'
-import { rooms } from '../data/rooms'
+import { rooms } from '../data/rooms.json'
 
 function RoomCard({ room, index, visible }) {
   const [hovered, setHovered] = useState(false)

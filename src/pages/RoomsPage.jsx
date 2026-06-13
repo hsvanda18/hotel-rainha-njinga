@@ -4,7 +4,7 @@ import {
   BedDouble, Users, Maximize2, Wifi, Check, ChevronLeft,
   ChevronRight, Star, Shield, Clock, ArrowRight, Phone,
 } from 'lucide-react'
-import { rooms } from '../data/rooms'
+import { rooms } from '../data/rooms.json'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 

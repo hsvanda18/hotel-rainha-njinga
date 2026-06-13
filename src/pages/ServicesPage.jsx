@@ -1,9 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { ChevronRight, ArrowRight, Phone, Check } from 'lucide-react'
+import {
+  ChevronRight, ArrowRight, Phone, Check,
+  Utensils, Wine, BellRing, Presentation, Users, Briefcase,
+  Dumbbell, Trees, Wifi, Car, Shirt, Lock, CreditCard,
+  Clock, ArrowUpDown, Plane,
+} from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { serviceCategories } from '../data/services'
+import servicesData from '../data/services.json'
+
+const { categories: serviceCategories } = servicesData
+const ICON_MAP = {
+  Utensils, Wine, BellRing, Presentation, Users, Briefcase,
+  Dumbbell, Trees, Wifi, Car, Shirt, Lock, CreditCard,
+  Clock, ArrowUpDown, Plane,
+}
 
 function useVisible(threshold = 0.1) {
   const [visible, setVisible] = useState(false)
@@ -20,7 +32,7 @@ function useVisible(threshold = 0.1) {
 }
 
 function ServiceCard({ service, index, visible }) {
-  const Icon = service.icon
+  const Icon = ICON_MAP[service.icon]
   return (
     <div
       className={`relative group bg-njinga-black border border-njinga-gray/40 hover:border-gold/40 overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-gold/10 ${

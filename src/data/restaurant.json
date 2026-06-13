@@ -1,0 +1,177 @@
+{
+  "menu": {
+    "entradas": [
+      {
+        "id": "e1",
+        "name": "Caldo de Peixe Njinga",
+        "desc": "Sopa tradicional angolana com peixe fresco, quiabos e especiarias da terra.",
+        "price": "4.50",
+        "badges": ["Tradicional"]
+      },
+      {
+        "id": "e2",
+        "name": "Camarão Grelhado com Alho",
+        "desc": "Camarão jumbo grelhado na brasa com manteiga de alho, limão e coentros.",
+        "price": "8.00",
+        "badges": ["Sem Glúten"]
+      },
+      {
+        "id": "e3",
+        "name": "Acepipes de Boas-Vindas",
+        "desc": "Seleção de petiscos angolanos: amendoins torrados, funge frito, chips de banana.",
+        "price": "3.50",
+        "badges": ["Vegetariano"]
+      },
+      {
+        "id": "e4",
+        "name": "Salada Tropical Njinga",
+        "desc": "Manga, abacate, camarão, coentros, vinagrete de maracujá e folhas frescas.",
+        "price": "5.50",
+        "badges": ["Sem Glúten"]
+      }
+    ],
+    "principais": [
+      {
+        "id": "p1",
+        "name": "Muamba de Galinha",
+        "desc": "Prato emblemático angolano: frango estufado em molho de palma com ginguba, quiabos e especiarias.",
+        "price": "12.00",
+        "badges": ["Tradicional", "Sem Glúten"],
+        "featured": true
+      },
+      {
+        "id": "p2",
+        "name": "Mufete de Capitão",
+        "desc": "Peixe capitão grelhado na brasa, servido com feijão de óleo de palma, funge e legumes salteados.",
+        "price": "14.00",
+        "badges": ["Tradicional"],
+        "featured": false
+      },
+      {
+        "id": "p3",
+        "name": "Calulu de Camarão",
+        "desc": "Guisado de camarão com peixe seco, folhas de batata-doce, tomate, cebola e azeite de palma.",
+        "price": "15.00",
+        "badges": ["Tradicional"],
+        "featured": false
+      },
+      {
+        "id": "p4",
+        "name": "Lombo de Vitela Grelhado",
+        "desc": "Lombo de vitela grelhado com molho de vinho tinto, batata rosti e legumes da época.",
+        "price": "18.00",
+        "badges": [],
+        "featured": false
+      },
+      {
+        "id": "p5",
+        "name": "Lagosta Gratinada",
+        "desc": "Meia lagosta gratinada com manteiga de ervas, alho e gratinada com queijo parmesão.",
+        "price": "24.00",
+        "badges": ["Premium"],
+        "featured": false
+      },
+      {
+        "id": "p6",
+        "name": "Cachupa Rica",
+        "desc": "Versão de luxo do prato nacional: milho, feijão, chouriço, toucinho, carne e legumes.",
+        "price": "11.00",
+        "badges": ["Tradicional"],
+        "featured": false
+      }
+    ],
+    "sobremesas": [
+      {
+        "id": "s1",
+        "name": "Pudim de Coco Angolano",
+        "desc": "Pudim cremoso de coco com calda de caramelo e lascas de coco tostado.",
+        "price": "4.00",
+        "badges": ["Vegetariano"]
+      },
+      {
+        "id": "s2",
+        "name": "Tarte de Banana com Chocolate",
+        "desc": "Base de biscoito, ganache de chocolate negro, banana caramelizada e chantilly.",
+        "price": "4.50",
+        "badges": ["Vegetariano"]
+      },
+      {
+        "id": "s3",
+        "name": "Gelado Artesanal de Maracujá",
+        "desc": "Gelado artesanal com polpa de maracujá fresco, servido com calda de frutas tropicais.",
+        "price": "3.50",
+        "badges": ["Vegetariano", "Sem Glúten"]
+      },
+      {
+        "id": "s4",
+        "name": "Seleção de Queijos",
+        "desc": "Três queijos artesanais angolanos com compota de figo, mel e pão de especiarias.",
+        "price": "6.00",
+        "badges": ["Vegetariano"]
+      }
+    ],
+    "cocktails": [
+      {
+        "id": "c1",
+        "name": "Njinga Sour",
+        "desc": "Gin angolano, maracujá, sumo de limão, xarope de açúcar, clara de ovo.",
+        "price": "5.00",
+        "badges": ["Assinatura"],
+        "featured": true
+      },
+      {
+        "id": "c2",
+        "name": "Luanda Sunset",
+        "desc": "Rum branco, sumo de laranja, grenadine, ginger beer, rodela de laranja.",
+        "price": "5.50",
+        "badges": ["Assinatura"],
+        "featured": false
+      },
+      {
+        "id": "c3",
+        "name": "Catembe Mule",
+        "desc": "Vodka, ginger beer, sumo de lima, hortelã fresca, gelo crushed.",
+        "price": "5.00",
+        "badges": [],
+        "featured": false
+      },
+      {
+        "id": "c4",
+        "name": "Kissama Collins",
+        "desc": "Gin, licor de elderflower, sumo de limão, água tónica, pepino e hortelã.",
+        "price": "5.00",
+        "badges": [],
+        "featured": false
+      },
+      {
+        "id": "c5",
+        "name": "Vinho da Casa",
+        "desc": "Seleção de vinhos brancos e tintos importados. Pergunte ao sommelier.",
+        "price": "3.50",
+        "badges": [],
+        "featured": false
+      },
+      {
+        "id": "c6",
+        "name": "Mocktail Tropical",
+        "desc": "Sumo de manga, maracujá, laranja, limonada artesanal e menta.",
+        "price": "3.00",
+        "badges": ["Sem Álcool"],
+        "featured": false
+      }
+    ]
+  },
+  "hours": [
+    { "meal": "Pequeno-Almoço", "time": "06:30 – 10:30", "days": "Todos os dias" },
+    { "meal": "Almoço", "time": "12:00 – 15:00", "days": "Todos os dias" },
+    { "meal": "Jantar", "time": "19:00 – 23:00", "days": "Todos os dias" },
+    { "meal": "Bar & Lounge", "time": "11:00 – 01:00", "days": "Todos os dias" },
+    { "meal": "Room Service", "time": "24 horas", "days": "Todos os dias" }
+  ],
+  "highlights": [
+    { "label": "Capacidade", "value": "80 lugares" },
+    { "label": "Esplanada", "value": "30 lugares" },
+    { "label": "Chef", "value": "João Kimbembe" },
+    { "label": "Cozinha", "value": "Angolana & Internacional" }
+  ]
+}
