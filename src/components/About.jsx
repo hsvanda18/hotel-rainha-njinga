@@ -1,24 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { MapPin, Shield, Clock, Award } from 'lucide-react'
+import homeData from '../data/home.json'
 
-const features = [
-  {
-    icon: MapPin,
-    title: 'Localização Privilegiada',
-    desc: 'Situado no elegante bairro de Morro Bento, próximo dos principais centros de negócios e pontos turísticos de Luanda.',
-  },
-  {
-    icon: Shield,
-    title: 'Conforto Garantido',
-    desc: '52 quartos modernos e confortáveis distribuídos por 3 pisos, com todo o equipamento necessário para uma estadia perfeita.',
-  },
-  {
-    icon: Clock,
-    title: 'Serviço 24 Horas',
-    desc: 'A nossa equipa dedicada está disponível 24 horas por dia, 7 dias por semana, para atender todas as suas necessidades.',
-  },
-]
+const ICON_MAP = { MapPin, Shield, Clock, Award }
+const { features } = homeData.about
 
 export default function About() {
   const [visible, setVisible] = useState(false)
@@ -144,7 +130,9 @@ export default function About() {
 
         {/* Feature Cards */}
         <div className="grid sm:grid-cols-3 gap-6">
-          {features.map((f, i) => (
+          {features.map((f, i) => {
+            const Icon = ICON_MAP[f.icon]
+            return (
             <div
               key={f.title}
               className={`group bg-njinga-charcoal border border-njinga-gray hover:border-gold/40 p-8
@@ -157,7 +145,7 @@ export default function About() {
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
               <div className="w-16 h-16 bg-gold/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/20 transition-colors duration-300">
-                <f.icon size={28} className="text-gold" />
+                <Icon size={28} className="text-gold" />
               </div>
               <h4 className="font-playfair text-xl font-semibold text-njinga-white mb-3">
                 {f.title}
@@ -166,7 +154,8 @@ export default function About() {
                 {f.desc}
               </p>
             </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

@@ -6,6 +6,10 @@ import {
 } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import aboutData from '../data/about.json'
+
+const { milestones, team, stats, mission, vision, values } = aboutData
+const ICON_MAP = { Shield, Lightbulb, Handshake, Award, Heart, Leaf, MapPin, Clock, Star, Users }
 
 function useVisible(threshold = 0.15) {
   const [visible, setVisible] = useState(false)
@@ -20,57 +24,6 @@ function useVisible(threshold = 0.15) {
   }, [threshold])
   return [ref, visible]
 }
-
-const milestones = [
-  { year: '2016', title: 'Fundação', desc: 'A 23 de maio de 2016, o Hotel Rainha Njinga abre as portas no Bairro Morro Bento, Rua dos Generais, Distrito do Samba, com a missão de elevar a hospitalidade em Luanda.' },
-  { year: '2018', title: 'Crescimento', desc: 'Consolidação da equipa e ampliação dos serviços. Abertura do Restaurante Njinga e do Bar & Lounge, reforçando a oferta gastronómica do hotel.' },
-  { year: '2020', title: 'Resiliência', desc: 'Adaptação exemplar durante a pandemia, mantendo os padrões de excelência e reinventando os serviços de forma segura para hóspedes e colaboradores.' },
-  { year: '2022', title: 'Expansão', desc: 'Renovação dos espaços comuns e lançamento da Sala de Eventos e Reuniões, tornando o hotel uma referência para eventos corporativos em Luanda.' },
-  { year: '2026', title: 'Hoje', desc: 'Referência da hospitalidade em Luanda, com 32 profissionais dedicados e a missão de fazer do hotel uma extensão do lar de cada hóspede.' },
-]
-
-const values = [
-  { icon: Shield, title: 'Profissionalismo', desc: 'Uma equipa de 32 profissionais altamente qualificados, empenhados em prestar um serviço de excelência em todos os departamentos do hotel.' },
-  { icon: Lightbulb, title: 'Inovação', desc: 'Procuramos constantemente novas formas de melhorar a experiência dos nossos hóspedes, adaptando os serviços às suas necessidades.' },
-  { icon: Handshake, title: 'Ética & Responsabilidade', desc: 'Agimos com transparência e responsabilidade social e ambiental, contribuindo positivamente para a comunidade de Luanda e para Angola.' },
-  { icon: Award, title: 'Excelência', desc: 'A excelência e a qualidade dos recursos humanos são os pilares que guiam cada decisão e cada interação com os nossos hóspedes.' },
-]
-
-const team = [
-  {
-    name: 'Dr. Pedro Júnior',
-    role: 'Sócio Gerente',
-    bio: 'Economista e contabilista certificado, com larga experiência e grande aptidão para o negócio hoteleiro. Fundador e responsável máximo do Hotel Rainha Njinga desde 2016.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&auto=format&fit=crop&facepad=3&faces=1',
-  },
-  {
-    name: 'João Kimbembe',
-    role: 'Chef Executivo',
-    bio: 'Formado em Paris, especialista em cozinha angolana contemporânea. Criou a ementa do Restaurante Njinga em 2012.',
-    image: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&q=80&auto=format&fit=crop',
-  },
-  {
-    name: 'Maria da Conceição',
-    role: 'Directora de Operações',
-    bio: 'Responsável pela qualidade do serviço em todos os departamentos. Formada em Gestão Hoteleira pela ISCTE.',
-    image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&q=80&auto=format&fit=crop',
-  },
-  {
-    name: 'Paulo Lopes',
-    role: 'Chefe de Recepção',
-    bio: 'A primeira voz e rosto do hotel. Fluente em português, inglês e francês, Paulo garante que cada hóspede se sinta em casa.',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80&auto=format&fit=crop',
-  },
-]
-
-const stats = [
-  { value: '52', label: 'Quartos' },
-  { value: '3', label: 'Estrelas' },
-  { value: '32', label: 'Colaboradores' },
-  { value: '10k+', label: 'Hóspedes / Ano' },
-  { value: '4.9', label: 'Avaliação Média' },
-  { value: '10', label: 'Anos de História' },
-]
 
 export default function AboutPage() {
   const navigate = useNavigate()
@@ -324,14 +277,8 @@ export default function AboutPage() {
           {/* Missão & Visão */}
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             {[
-              {
-                label: 'Missão',
-                text: 'Proporcionar serviços de hotelaria com excelência de qualidade, visando a satisfação dos clientes, contribuindo para a valorização dos colaboradores, promovendo benefícios à sociedade e resultados para os proprietários.',
-              },
-              {
-                label: 'Visão',
-                text: 'Ser o mais bem-sucedido e respeitado no sector de prestação de serviço de hospedagem de Luanda na sua categoria, fazendo deste hotel uma extensão do seu lar, promovendo conforto, segurança e qualidade.',
-              },
+              { label: 'Missão', text: mission },
+              { label: 'Visão', text: vision },
             ].map((item, i) => (
               <div
                 key={item.label}
@@ -353,7 +300,7 @@ export default function AboutPage() {
           {/* Values grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v, i) => {
-              const Icon = v.icon
+              const Icon = ICON_MAP[v.icon]
               return (
                 <div
                   key={v.title}

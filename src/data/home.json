@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "slides": [
+      {
+        "url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&q=80&auto=format&fit=crop",
+        "alt": "Hotel Rainha Njinga - Vista exterior"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1920&q=80&auto=format&fit=crop",
+        "alt": "Hotel Rainha Njinga - Piscina e jardins"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1920&q=80&auto=format&fit=crop",
+        "alt": "Hotel Rainha Njinga - Suite de luxo"
+      }
+    ],
+    "stats": [
+      { "value": "52", "label": "Quartos" },
+      { "value": "3", "label": "Pisos" },
+      { "value": "24h", "label": "Serviço" },
+      { "value": "100%", "label": "Satisfação" }
+    ]
+  },
+  "about": {
+    "features": [
+      {
+        "icon": "MapPin",
+        "title": "Localização Privilegiada",
+        "desc": "Situado no elegante bairro de Morro Bento, próximo dos principais centros de negócios e pontos turísticos de Luanda."
+      },
+      {
+        "icon": "Shield",
+        "title": "Conforto Garantido",
+        "desc": "52 quartos modernos e confortáveis distribuídos por 3 pisos, com todo o equipamento necessário para uma estadia perfeita."
+      },
+      {
+        "icon": "Clock",
+        "title": "Serviço 24 Horas",
+        "desc": "A nossa equipa dedicada está disponível 24 horas por dia, 7 dias por semana, para atender todas as suas necessidades."
+      }
+    ]
+  }
+}

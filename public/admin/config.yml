@@ -11,6 +11,108 @@ media_folder: public/images/cms
 public_folder: /images/cms
 
 collections:
+  - name: homepage
+    label: "Página Inicial"
+    files:
+      - name: homepage
+        label: "Conteúdo da Página Inicial"
+        file: src/data/home.json
+        fields:
+          - label: Hero (Slideshow)
+            name: hero
+            widget: object
+            fields:
+              - label: Slides de Fundo
+                name: slides
+                widget: list
+                summary: "{{fields.alt}}"
+                hint: "Imagens que rodam automaticamente no fundo do ecrã principal"
+                fields:
+                  - { label: Imagem, name: url, widget: image }
+                  - { label: Texto Alternativo, name: alt, widget: string, hint: "Descrição da imagem para acessibilidade" }
+              - label: Estatísticas (barra inferior)
+                name: stats
+                widget: list
+                summary: "{{fields.value}} {{fields.label}}"
+                hint: "Números exibidos na barra de destaque do hero"
+                fields:
+                  - { label: Valor, name: value, widget: string, hint: "Ex: 52, 24h, 100%" }
+                  - { label: Etiqueta, name: label, widget: string, hint: "Ex: Quartos, Serviço, Satisfação" }
+          - label: Secção Sobre Nós (Homepage)
+            name: about
+            widget: object
+            fields:
+              - label: Cartões de Destaque
+                name: features
+                widget: list
+                summary: "{{fields.title}}"
+                hint: "Os 3 cartões exibidos na secção Sobre Nós da homepage"
+                fields:
+                  - label: Ícone
+                    name: icon
+                    widget: select
+                    options:
+                      - { label: "Pin — Localização", value: MapPin }
+                      - { label: "Escudo — Conforto / Segurança", value: Shield }
+                      - { label: "Relógio — Disponibilidade 24h", value: Clock }
+                      - { label: "Troféu — Qualidade / Prémios", value: Award }
+                      - { label: "Coração — Hospitalidade", value: Heart }
+                      - { label: "Estrela — Avaliação", value: Star }
+                      - { label: "Pessoas — Equipa", value: Users }
+                  - { label: Título, name: title, widget: string }
+                  - { label: Descrição, name: desc, widget: text }
+
+  - name: sobre
+    label: "Página Sobre Nós"
+    files:
+      - name: sobre
+        label: "Conteúdo da Página Sobre Nós"
+        file: src/data/about.json
+        fields:
+          - { label: Missão, name: mission, widget: text, hint: "Texto exibido no cartão Missão" }
+          - { label: Visão, name: vision, widget: text, hint: "Texto exibido no cartão Visão" }
+          - label: Estatísticas (banner de números)
+            name: stats
+            widget: list
+            summary: "{{fields.value}} — {{fields.label}}"
+            fields:
+              - { label: Valor, name: value, widget: string, hint: "Ex: 52, 10k+, 4.9" }
+              - { label: Etiqueta, name: label, widget: string, hint: "Ex: Quartos, Hóspedes / Ano" }
+          - label: Valores
+            name: values
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - label: Ícone
+                name: icon
+                widget: select
+                options:
+                  - { label: "Escudo — Profissionalismo / Segurança", value: Shield }
+                  - { label: "Lâmpada — Inovação", value: Lightbulb }
+                  - { label: "Aperto de Mão — Ética / Parcerias", value: Handshake }
+                  - { label: "Troféu — Excelência / Prémios", value: Award }
+                  - { label: "Coração — Hospitalidade / Cuidado", value: Heart }
+                  - { label: "Folha — Sustentabilidade", value: Leaf }
+              - { label: Título, name: title, widget: string }
+              - { label: Descrição, name: desc, widget: text }
+          - label: Cronologia (Timeline)
+            name: milestones
+            widget: list
+            summary: "{{fields.year}} — {{fields.title}}"
+            fields:
+              - { label: Ano, name: year, widget: string }
+              - { label: Título, name: title, widget: string }
+              - { label: Descrição, name: desc, widget: text }
+          - label: Equipa
+            name: team
+            widget: list
+            summary: "{{fields.name}} — {{fields.role}}"
+            fields:
+              - { label: Nome, name: name, widget: string }
+              - { label: Cargo, name: role, widget: string }
+              - { label: Biografia, name: bio, widget: text }
+              - { label: Fotografia, name: image, widget: image }
+
   - name: quartos
     label: Quartos
     label_singular: Quarto

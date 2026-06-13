@@ -1,28 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronDown, Star } from 'lucide-react'
+import homeData from '../data/home.json'
 
-const slides = [
-  {
-    url: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&q=80&auto=format&fit=crop',
-    alt: 'Hotel Rainha Njinga - Vista exterior',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1920&q=80&auto=format&fit=crop',
-    alt: 'Hotel Rainha Njinga - Piscina e jardins',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1920&q=80&auto=format&fit=crop',
-    alt: 'Hotel Rainha Njinga - Suite de luxo',
-  },
-]
-
-const stats = [
-  { value: '52', label: 'Quartos' },
-  { value: '3', label: 'Pisos' },
-  { value: '24h', label: 'Serviço' },
-  { value: '100%', label: 'Satisfação' },
-]
+const { slides, stats } = homeData.hero
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
