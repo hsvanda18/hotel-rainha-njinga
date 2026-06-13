@@ -42,13 +42,13 @@
         ]
       },
       "images": [
-        "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&q=80&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=1200&q=80&auto=format&fit=crop"
+        "/images/hotel/IMG_8982.jpeg",
+        "/images/hotel/IMG_9001.jpeg",
+        "/images/hotel/IMG_8988.jpeg"
       ],
       "type": "Suite Premium",
       "id": "suite",
-      "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80&auto=format&fit=crop",
+      "image": "/images/hotel/IMG_8982.jpeg",
       "guests": "2-3",
       "features": [
         "Sala de Estar",
@@ -97,13 +97,13 @@
         ]
       },
       "images": [
-        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=1200&q=80&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?w=1200&q=80&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=1200&q=80&auto=format&fit=crop"
+        "/images/hotel/IMG_8978.jpeg",
+        "/images/hotel/IMG_8995.jpeg",
+        "/images/hotel/IMG_8996.jpeg"
       ],
       "type": "Quarto Duplo",
       "id": "double",
-      "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&q=80&auto=format&fit=crop",
+      "image": "/images/hotel/IMG_8978.jpeg",
       "guests": "2",
       "features": [
         "Cama King-Size",
@@ -148,13 +148,12 @@
         ]
       },
       "images": [
-        "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=1200&q=80&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1631049421450-348ccd7f8949?w=1200&q=80&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200&q=80&auto=format&fit=crop"
+        "/images/hotel/IMG_8998.jpeg",
+        "/images/hotel/IMG_9003.jpeg"
       ],
       "type": "Quarto Individual",
       "id": "single",
-      "image": "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80&auto=format&fit=crop",
+      "image": "/images/hotel/IMG_8998.jpeg",
       "guests": "1",
       "features": [
         "Secretária",

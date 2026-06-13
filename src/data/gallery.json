@@ -2,206 +2,188 @@
   "images": [
     {
       "id": "g1",
-      "src": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80&auto=format&fit=crop",
-      "alt": "Vista de Luanda ao pôr do sol",
-      "label": "Luanda ao Pôr do Sol",
+      "src": "/images/hotel/IMG_8980.jpeg",
+      "thumb": "/images/hotel/IMG_8980.jpeg",
+      "alt": "Fachada exterior do Hotel Rainha Njinga, Morro Bento, Luanda",
+      "label": "Fachada Exterior",
       "category": "exterior",
       "featured": true
     },
     {
       "id": "g2",
-      "src": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&q=80&auto=format&fit=crop",
-      "alt": "Vista noturna de Luanda",
-      "label": "Luanda by Night",
+      "src": "/images/hotel/IMG_8977.jpeg",
+      "thumb": "/images/hotel/IMG_8977.jpeg",
+      "alt": "Recepção do Hotel Rainha Njinga com balcão e letras douradas",
+      "label": "Recepção",
       "category": "exterior",
-      "featured": false
+      "featured": true
     },
     {
       "id": "g3",
-      "src": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&q=80&auto=format&fit=crop",
-      "alt": "Fachada do hotel",
-      "label": "Hotel Rainha Njinga",
+      "src": "/images/hotel/IMG_8999.jpeg",
+      "thumb": "/images/hotel/IMG_8999.jpeg",
+      "alt": "Balcão de recepção do Hotel Rainha Njinga — ângulo lateral",
+      "label": "Balcão de Recepção",
       "category": "exterior",
       "featured": false
     },
     {
       "id": "g4",
-      "src": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&q=80&auto=format&fit=crop",
-      "alt": "Piscina do hotel",
-      "label": "Piscina Exterior",
+      "src": "/images/hotel/IMG_8986.jpeg",
+      "thumb": "/images/hotel/IMG_8986.jpeg",
+      "alt": "Lobby e sala de estar do Hotel Rainha Njinga com sofás e lustre",
+      "label": "Lobby & Lounge",
       "category": "exterior",
-      "featured": false
+      "featured": true
     },
     {
       "id": "g5",
-      "src": "https://images.unsplash.com/photo-1596436889106-be35e843f974?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1596436889106-be35e843f974?w=600&q=80&auto=format&fit=crop",
-      "alt": "Lobby do hotel",
-      "label": "Lobby & Recepção",
+      "src": "/images/hotel/IMG_8994.jpeg",
+      "thumb": "/images/hotel/IMG_8994.jpeg",
+      "alt": "Área de bar e lounge do Hotel Rainha Njinga",
+      "label": "Bar & Lounge",
       "category": "exterior",
       "featured": false
     },
     {
       "id": "g6",
-      "src": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80&auto=format&fit=crop",
-      "alt": "Suite Njinga Premium",
-      "label": "Suite Njinga",
-      "category": "quartos",
-      "featured": true
+      "src": "/images/hotel/IMG_8984.jpeg",
+      "thumb": "/images/hotel/IMG_8984.jpeg",
+      "alt": "Corredor principal do Hotel Rainha Njinga com tapete vermelho",
+      "label": "Corredor Principal",
+      "category": "exterior",
+      "featured": false
     },
     {
       "id": "g7",
-      "src": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80&auto=format&fit=crop",
-      "alt": "Quarto de luxo",
-      "label": "Quarto Duplo",
-      "category": "quartos",
+      "src": "/images/hotel/IMG_8987.jpeg",
+      "thumb": "/images/hotel/IMG_8987.jpeg",
+      "alt": "Área de lounge com painel decorativo verde e arte angolana",
+      "label": "Área de Lounge",
+      "category": "exterior",
       "featured": false
     },
     {
       "id": "g8",
-      "src": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80&auto=format&fit=crop",
-      "alt": "Casa de banho premium",
-      "label": "Casa de Banho Premium",
+      "src": "/images/hotel/IMG_8978.jpeg",
+      "thumb": "/images/hotel/IMG_8978.jpeg",
+      "alt": "Quarto duplo standard com cama king-size e secretária",
+      "label": "Quarto Duplo Standard",
       "category": "quartos",
-      "featured": false
+      "featured": true
     },
     {
       "id": "g9",
-      "src": "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80&auto=format&fit=crop",
-      "alt": "Vista da janela do quarto",
-      "label": "Vista Panorâmica",
+      "src": "/images/hotel/IMG_8995.jpeg",
+      "thumb": "/images/hotel/IMG_8995.jpeg",
+      "alt": "Quarto duplo do Hotel Rainha Njinga com vista para a janela",
+      "label": "Quarto Duplo — Vista",
       "category": "quartos",
       "featured": false
     },
     {
       "id": "g10",
-      "src": "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600&q=80&auto=format&fit=crop",
-      "alt": "Quarto individual elegante",
-      "label": "Quarto Individual",
+      "src": "/images/hotel/IMG_8982.jpeg",
+      "thumb": "/images/hotel/IMG_8982.jpeg",
+      "alt": "Suite com papel de parede decorativo e cama dupla",
+      "label": "Suite Premium",
       "category": "quartos",
-      "featured": false
+      "featured": true
     },
     {
       "id": "g11",
-      "src": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600&q=80&auto=format&fit=crop",
-      "alt": "Terraço privativo",
-      "label": "Terraço Privativo",
+      "src": "/images/hotel/IMG_9003.jpeg",
+      "thumb": "/images/hotel/IMG_9003.jpeg",
+      "alt": "Quarto duplo elegante com mesa de cabeceira e telefone",
+      "label": "Quarto Duplo Elegante",
       "category": "quartos",
       "featured": false
     },
     {
       "id": "g12",
-      "src": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80&auto=format&fit=crop",
-      "alt": "Interior do restaurante",
+      "src": "/images/hotel/IMG_9001.jpeg",
+      "thumb": "/images/hotel/IMG_9001.jpeg",
+      "alt": "Sala de estar da suite com televisão e secretária",
+      "label": "Suite — Sala de Estar",
+      "category": "quartos",
+      "featured": false
+    },
+    {
+      "id": "g13",
+      "src": "/images/hotel/IMG_8998.jpeg",
+      "thumb": "/images/hotel/IMG_8998.jpeg",
+      "alt": "Quarto individual com secretária, televisão e minibar",
+      "label": "Quarto Individual",
+      "category": "quartos",
+      "featured": false
+    },
+    {
+      "id": "g14",
+      "src": "/images/hotel/IMG_8988.jpeg",
+      "thumb": "/images/hotel/IMG_8988.jpeg",
+      "alt": "Casa de banho completa com banheira de imersão e chuveiro",
+      "label": "Casa de Banho — Banheira",
+      "category": "quartos",
+      "featured": false
+    },
+    {
+      "id": "g15",
+      "src": "/images/hotel/IMG_8996.jpeg",
+      "thumb": "/images/hotel/IMG_8996.jpeg",
+      "alt": "Casa de banho com lavatório moderno e espelho",
+      "label": "Casa de Banho",
+      "category": "quartos",
+      "featured": false
+    },
+    {
+      "id": "g16",
+      "src": "/images/hotel/IMG_8981.jpeg",
+      "thumb": "/images/hotel/IMG_8981.jpeg",
+      "alt": "Sala do Restaurante Njinga com mesas preparadas e buffet",
       "label": "Restaurante Njinga",
       "category": "restaurante",
       "featured": true
     },
     {
-      "id": "g13",
-      "src": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600&q=80&auto=format&fit=crop",
-      "alt": "Prato de gastronomia angolana",
-      "label": "Gastronomia Local",
-      "category": "restaurante",
-      "featured": false
-    },
-    {
-      "id": "g14",
-      "src": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80&auto=format&fit=crop",
-      "alt": "Prato gourmet",
-      "label": "Alta Cozinha",
-      "category": "restaurante",
-      "featured": false
-    },
-    {
-      "id": "g15",
-      "src": "https://images.unsplash.com/photo-1603512500383-3f000ce4b3e0?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1603512500383-3f000ce4b3e0?w=600&q=80&auto=format&fit=crop",
-      "alt": "Bar e lounge do hotel",
-      "label": "Bar & Lounge",
-      "category": "restaurante",
-      "featured": false
-    },
-    {
-      "id": "g16",
-      "src": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=600&q=80&auto=format&fit=crop",
-      "alt": "Cocktails do bar",
-      "label": "Cocktails de Autor",
-      "category": "restaurante",
-      "featured": false
-    },
-    {
       "id": "g17",
-      "src": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600&q=80&auto=format&fit=crop",
-      "alt": "Bebidas e cocktails",
-      "label": "Njinga Sour",
+      "src": "/images/hotel/IMG_8979.jpeg",
+      "thumb": "/images/hotel/IMG_8979.jpeg",
+      "alt": "Vista do Restaurante Njinga com bar ao fundo e mesas brancas",
+      "label": "Restaurante & Bar",
       "category": "restaurante",
       "featured": false
     },
     {
       "id": "g18",
-      "src": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80&auto=format&fit=crop",
-      "alt": "Sala de eventos preparada",
-      "label": "Salão Njinga",
+      "src": "/images/hotel/IMG_8983.jpeg",
+      "thumb": "/images/hotel/IMG_8983.jpeg",
+      "alt": "Bar do hotel com balcão de madeira, garrafas e bancos altos",
+      "label": "Bar do Hotel",
+      "category": "restaurante",
+      "featured": false
+    },
+    {
+      "id": "g19",
+      "src": "/images/hotel/IMG_8990.jpeg",
+      "thumb": "/images/hotel/IMG_8990.jpeg",
+      "alt": "Sala de eventos do Hotel Rainha Njinga com projector e decoração",
+      "label": "Sala de Eventos",
       "category": "eventos",
       "featured": true
     },
     {
-      "id": "g19",
-      "src": "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&q=80&auto=format&fit=crop",
-      "alt": "Evento de gala no hotel",
-      "label": "Gala & Recepções",
-      "category": "eventos",
-      "featured": false
-    },
-    {
       "id": "g20",
-      "src": "https://images.unsplash.com/photo-1462826303086-329426d1aef5?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1462826303086-329426d1aef5?w=600&q=80&auto=format&fit=crop",
-      "alt": "Sala de reuniões executiva",
-      "label": "Sala Executiva",
-      "category": "eventos",
-      "featured": false
-    },
-    {
-      "id": "g21",
-      "src": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80&auto=format&fit=crop",
-      "alt": "Esplanada para eventos",
-      "label": "Esplanada & Jardim",
-      "category": "eventos",
-      "featured": false
-    },
-    {
-      "id": "g22",
-      "src": "https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200&q=80&auto=format&fit=crop",
-      "thumb": "https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&q=80&auto=format&fit=crop",
-      "alt": "Conferência no hotel",
-      "label": "Conferências",
+      "src": "/images/hotel/IMG_8993.jpeg",
+      "thumb": "/images/hotel/IMG_8993.jpeg",
+      "alt": "Sala de reuniões com mesa executiva preta e cadeiras de escritório",
+      "label": "Sala de Reuniões",
       "category": "eventos",
       "featured": false
     }
   ],
   "categories": [
     { "key": "todos", "label": "Todos" },
-    { "key": "exterior", "label": "Exterior & Luanda" },
+    { "key": "exterior", "label": "Exterior & Recepção" },
     { "key": "quartos", "label": "Quartos" },
     { "key": "restaurante", "label": "Restaurante & Bar" },
     { "key": "eventos", "label": "Eventos" }

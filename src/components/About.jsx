@@ -54,8 +54,8 @@ export default function About() {
               {/* Image container */}
               <div className="relative overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80&auto=format&fit=crop"
-                  alt="Hotel Rainha Njinga - Lobby"
+                  src="/images/hotel/IMG_8977.jpeg"
+                  alt="Hotel Rainha Njinga - Recepção"
                   className="w-full h-80 lg:h-[500px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-njinga-black/50 via-transparent to-transparent" />

@@ -2,16 +2,16 @@
   "hero": {
     "slides": [
       {
-        "url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&q=80&auto=format&fit=crop",
-        "alt": "Hotel Rainha Njinga - Vista exterior"
+        "url": "/images/hotel/IMG_8977.jpeg",
+        "alt": "Recepção do Hotel Rainha Njinga — balcão com letras douradas"
       },
       {
-        "url": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1920&q=80&auto=format&fit=crop",
-        "alt": "Hotel Rainha Njinga - Piscina e jardins"
+        "url": "/images/hotel/IMG_8981.jpeg",
+        "alt": "Restaurante Njinga — sala de refeições preparada para os hóspedes"
       },
       {
-        "url": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1920&q=80&auto=format&fit=crop",
-        "alt": "Hotel Rainha Njinga - Suite de luxo"
+        "url": "/images/hotel/IMG_8986.jpeg",
+        "alt": "Lobby & Lounge do Hotel Rainha Njinga — sofás elegantes e lustre"
       }
     ],
     "stats": [

@@ -47,7 +47,7 @@ export default function AboutPage() {
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1600&q=80&auto=format&fit=crop"
+            src="/images/hotel/IMG_8977.jpeg"
             alt="Hotel Rainha Njinga"
             className="w-full h-full object-cover opacity-20"
           />
@@ -130,7 +130,7 @@ export default function AboutPage() {
                 <div className="absolute -bottom-5 -right-5 w-full h-full border-2 border-gold/20 pointer-events-none" />
                 <div className="relative overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=900&q=80&auto=format&fit=crop"
+                    src="/images/hotel/IMG_8986.jpeg"
                     alt="Lobby do Hotel Rainha Njinga"
                     className="w-full h-[480px] object-cover"
                   />
@@ -243,8 +243,8 @@ export default function AboutPage() {
               <div className="relative">
                 <div className="absolute -top-5 -left-5 w-full h-full border-2 border-gold/20 pointer-events-none" />
                 <img
-                  src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=900&q=80&auto=format&fit=crop"
-                  alt="Inspiração - África e cultura angolana"
+                  src="/images/hotel/IMG_8987.jpeg"
+                  alt="Decoração angolana no Hotel Rainha Njinga"
                   className="w-full h-[480px] object-cover relative"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-njinga-charcoal/60 via-transparent to-transparent" />
@@ -463,23 +463,23 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-2 gap-3">
               <img
-                src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80&auto=format&fit=crop"
-                alt="Suite Njinga"
+                src="/images/hotel/IMG_8982.jpeg"
+                alt="Suite Premium — Hotel Rainha Njinga"
                 className="w-full h-56 object-cover"
               />
               <img
-                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80&auto=format&fit=crop"
-                alt="Restaurante"
+                src="/images/hotel/IMG_8981.jpeg"
+                alt="Restaurante Njinga"
                 className="w-full h-56 object-cover mt-8"
               />
               <img
-                src="https://images.unsplash.com/photo-1603512500383-3f000ce4b3e0?w=600&q=80&auto=format&fit=crop"
-                alt="Bar"
+                src="/images/hotel/IMG_8983.jpeg"
+                alt="Bar do Hotel Rainha Njinga"
                 className="w-full h-48 object-cover"
               />
               <img
-                src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&q=80&auto=format&fit=crop"
-                alt="Salão de eventos"
+                src="/images/hotel/IMG_8990.jpeg"
+                alt="Sala de Eventos — Hotel Rainha Njinga"
                 className="w-full h-48 object-cover mt-8"
               />
             </div>
