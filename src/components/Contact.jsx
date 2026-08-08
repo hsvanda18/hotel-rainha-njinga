@@ -19,7 +19,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    lines: ['reservas@hotelrainhanjinga.ao', 'info@hotelrainhanjinga.ao'],
+    lines: ['hrainhanjinga@hotmail.com'],
   },
   {
     icon: Clock,

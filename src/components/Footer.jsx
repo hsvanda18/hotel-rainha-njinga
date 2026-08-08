@@ -193,8 +193,8 @@ export default function Footer() {
               </li>
               <li className="flex gap-3">
                 <Mail size={14} className="text-gold/60 flex-shrink-0" />
-                <a href="mailto:reservas@hotelrainhanjinga.ao" className="font-inter text-sm text-njinga-white/70 hover:text-gold transition-colors duration-200 break-all">
-                  reservas@hotelrainhanjinga.ao
+                <a href="mailto:hrainhanjinga@hotmail.com" className="font-inter text-sm text-njinga-white/70 hover:text-gold transition-colors duration-200 break-all">
+                  hrainhanjinga@hotmail.com
                 </a>
               </li>
             </ul>
