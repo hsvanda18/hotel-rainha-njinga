@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle, MessageCircle } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle, MessageCircle, AlertCircle } from 'lucide-react'
+import { submitToWeb3Forms } from '../lib/web3forms'
 
 const contactInfo = [
   {
@@ -31,6 +32,8 @@ const contactInfo = [
 export default function Contact() {
   const [visible, setVisible] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState(false)
   const [form, setForm] = useState({
     name: '', email: '', phone: '', checkin: '', checkout: '', guests: '1', message: '',
   })
@@ -49,11 +52,31 @@ export default function Contact() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 6000)
-    setForm({ name: '', email: '', phone: '', checkin: '', checkout: '', guests: '1', message: '' })
+    setSubmitting(true)
+    setError(false)
+    try {
+      await submitToWeb3Forms(
+        {
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          checkin: form.checkin,
+          checkout: form.checkout,
+          guests: form.guests,
+          message: form.message,
+        },
+        `Novo pedido de reserva — ${form.name}`
+      )
+      setSubmitted(true)
+      setTimeout(() => setSubmitted(false), 6000)
+      setForm({ name: '', email: '', phone: '', checkin: '', checkout: '', guests: '1', message: '' })
+    } catch {
+      setError(true)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   const inputClass = `input-gold`
@@ -188,6 +211,17 @@ export default function Contact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
+                  <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
+
+                  {error && (
+                    <div className="flex items-center gap-3 bg-red-500/10 border border-red-500/30 px-4 py-3">
+                      <AlertCircle size={18} className="text-red-400 flex-shrink-0" />
+                      <p className="font-inter text-sm text-njinga-white/80">
+                        Não foi possível enviar. Tente novamente ou contacte-nos por WhatsApp.
+                      </p>
+                    </div>
+                  )}
+
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
                       <label htmlFor="contact-name" className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-2">
@@ -302,10 +336,11 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="btn-gold w-full flex items-center justify-center gap-3 py-4 text-base"
+                    disabled={submitting}
+                    className="btn-gold w-full flex items-center justify-center gap-3 py-4 text-base disabled:opacity-60"
                   >
                     <Send size={15} />
-                    Enviar Pedido de Reserva
+                    {submitting ? 'A enviar...' : 'Enviar Pedido de Reserva'}
                   </button>
                 </form>
               )}

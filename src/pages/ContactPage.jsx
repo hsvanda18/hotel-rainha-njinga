@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom'
 import {
   MapPin, Phone, Mail, Clock, Send, CheckCircle,
   MessageCircle, ChevronDown, ChevronUp, ArrowRight,
-  Utensils, Users, BedDouble, Info,
+  Utensils, Users, BedDouble, Info, AlertCircle,
 } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { submitToWeb3Forms } from '../lib/web3forms'
 
 const contactInfo = [
   {
@@ -128,6 +129,8 @@ function FAQ({ item }) {
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState(false)
   const [form, setForm] = useState({
     name: '', email: '', phone: '', checkin: '', checkout: '',
     guests: '1', type: 'reserva', message: '',
@@ -139,11 +142,33 @@ export default function ContactPage() {
 
   const handleChange = (e) => setForm((p) => ({ ...p, [e.target.name]: e.target.value }))
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 6000)
-    setForm({ name: '', email: '', phone: '', checkin: '', checkout: '', guests: '1', type: 'reserva', message: '' })
+    setSubmitting(true)
+    setError(false)
+    try {
+      const typeLabel = INQUIRY_TYPES.find((t) => t.value === form.type)?.label || form.type
+      await submitToWeb3Forms(
+        {
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          checkin: form.checkin,
+          checkout: form.checkout,
+          guests: form.guests,
+          type: typeLabel,
+          message: form.message,
+        },
+        `Novo contacto (${typeLabel}) — ${form.name}`
+      )
+      setSubmitted(true)
+      setTimeout(() => setSubmitted(false), 6000)
+      setForm({ name: '', email: '', phone: '', checkin: '', checkout: '', guests: '1', type: 'reserva', message: '' })
+    } catch {
+      setError(true)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -300,6 +325,17 @@ export default function ContactPage() {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">
+                    <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
+
+                    {error && (
+                      <div className="flex items-center gap-3 bg-red-500/10 border border-red-500/30 px-4 py-3">
+                        <AlertCircle size={18} className="text-red-400 flex-shrink-0" />
+                        <p className="font-inter text-sm text-njinga-white/80">
+                          Não foi possível enviar. Tente novamente ou contacte-nos por WhatsApp.
+                        </p>
+                      </div>
+                    )}
+
                     {/* Tipo de consulta */}
                     <div>
                       <label htmlFor="cp-type" className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-2">
@@ -389,10 +425,10 @@ export default function ContactPage() {
                         className="input-gold resize-none" />
                     </div>
 
-                    <button type="submit"
-                      className="btn-gold w-full flex items-center justify-center gap-3 py-4 text-base">
+                    <button type="submit" disabled={submitting}
+                      className="btn-gold w-full flex items-center justify-center gap-3 py-4 text-base disabled:opacity-60">
                       <Send size={15} />
-                      Enviar Mensagem
+                      {submitting ? 'A enviar...' : 'Enviar Mensagem'}
                     </button>
 
                     <p className="font-inter text-[11px] text-njinga-white/70 text-center">
