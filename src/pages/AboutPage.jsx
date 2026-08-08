@@ -49,6 +49,11 @@ export default function AboutPage() {
           <img
             src="/images/hotel/IMG_8977.jpeg"
             alt="Hotel Rainha Njinga"
+            width={1280}
+            height={853}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-njinga-black/70 via-njinga-black/50 to-njinga-black" />
@@ -66,7 +71,7 @@ export default function AboutPage() {
               <span className="text-gold italic">História</span>
             </h1>
             <p
-              className={`font-inter text-njinga-white/60 text-base leading-relaxed mb-10 max-w-lg transition-all duration-700 delay-150 ${
+              className={`font-inter text-njinga-white/70 text-base leading-relaxed mb-10 max-w-lg transition-all duration-700 delay-150 ${
                 heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
@@ -107,7 +112,7 @@ export default function AboutPage() {
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
                 <p className="font-playfair text-3xl lg:text-4xl font-bold text-gold">{s.value}</p>
-                <p className="font-inter text-[10px] uppercase tracking-widest text-njinga-white/40 mt-1">
+                <p className="font-inter text-[10px] uppercase tracking-widest text-njinga-white/70 mt-1">
                   {s.label}
                 </p>
               </div>
@@ -132,6 +137,10 @@ export default function AboutPage() {
                   <img
                     src="/images/hotel/IMG_8986.jpeg"
                     alt="Lobby do Hotel Rainha Njinga"
+                    width={1280}
+                    height={853}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-[480px] object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-njinga-black/50 via-transparent to-transparent" />
@@ -159,10 +168,10 @@ export default function AboutPage() {
                 <span className="text-gold">Luanda</span>{' '}
                 à sua disposição
               </h2>
-              <p className="font-inter text-njinga-white/60 text-base leading-relaxed mb-5">
+              <p className="font-inter text-njinga-white/70 text-base leading-relaxed mb-5">
                 Fundado a <strong className="text-gold font-semibold">23 de maio de 2016</strong>, o Hotel Rainha Njinga nasceu com a missão de proporcionar serviços de hotelaria com excelência de qualidade, no Bairro Morro Bento, Distrito do Samba, Luanda. O nome homenageia a Rainha Njinga Mbande, símbolo de força, diplomacia e identidade angolana.
               </p>
-              <p className="font-inter text-njinga-white/60 text-base leading-relaxed mb-8">
+              <p className="font-inter text-njinga-white/70 text-base leading-relaxed mb-8">
                 Ao longo de 10 anos, crescemos e consolidámos a nossa posição no mercado, com{' '}
                 <strong className="text-gold font-semibold">32 profissionais</strong> dedicados e uma oferta completa que inclui restaurante, bar, sala de eventos e serviços de excelência para hóspedes de negócios e lazer.
               </p>
@@ -175,7 +184,7 @@ export default function AboutPage() {
                 ].map((s, i) => (
                   <div key={s.l} className={`text-center ${i < 2 ? 'border-r border-gold/20' : ''}`}>
                     <p className="font-playfair text-3xl font-bold text-gold">{s.n}</p>
-                    <p className="font-inter text-[11px] uppercase tracking-widest text-njinga-white/50 mt-1">{s.l}</p>
+                    <p className="font-inter text-[11px] uppercase tracking-widest text-njinga-white/70 mt-1">{s.l}</p>
                   </div>
                 ))}
               </div>
@@ -216,18 +225,18 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <p className="font-inter text-njinga-white/60 text-base leading-relaxed mb-5">
+              <p className="font-inter text-njinga-white/70 text-base leading-relaxed mb-5">
                 Njinga Mbande (c. 1583–1663) foi rainha dos reinos Ndongo e Matamba, no actual território
                 de Angola. Reconhecida internacionalmente pela sua inteligência diplomática, coragem
                 e visão estratégica, tornou-se um dos maiores símbolos de resistência e liderança feminina
                 em África.
               </p>
-              <p className="font-inter text-njinga-white/60 text-base leading-relaxed mb-5">
+              <p className="font-inter text-njinga-white/70 text-base leading-relaxed mb-5">
                 O nosso hotel homenageia este legado extraordinário. Tal como a Rainha Njinga soube
                 navegar entre culturas, tradições e modernidade, também nós procuramos criar uma
                 ponte entre a identidade cultural angolana e a hospitalidade contemporânea.
               </p>
-              <p className="font-inter text-njinga-white/60 text-base leading-relaxed">
+              <p className="font-inter text-njinga-white/70 text-base leading-relaxed">
                 Cada detalhe do hotel — da decoração aos nomes dos pratos do restaurante,
                 da suite principal aos coquetéis do bar — é uma homenagem à sua memória
                 e ao povo angolano.
@@ -245,11 +254,15 @@ export default function AboutPage() {
                 <img
                   src="/images/hotel/IMG_8987.jpeg"
                   alt="Decoração angolana no Hotel Rainha Njinga"
+                  width={1280}
+                  height={853}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-[480px] object-cover relative"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-njinga-charcoal/60 via-transparent to-transparent" />
                 <div className="absolute bottom-6 right-6 bg-gold/10 border border-gold/30 backdrop-blur-sm px-5 py-4 max-w-[220px]">
-                  <p className="font-inter text-[10px] text-gold/70 uppercase tracking-widest mb-1">Símbolo de</p>
+                  <p className="font-inter text-[10px] text-gold uppercase tracking-widest mb-1">Símbolo de</p>
                   <p className="font-playfair text-njinga-white font-bold text-lg leading-snug">
                     Força, Diplomacia & Identidade
                   </p>
@@ -287,7 +300,7 @@ export default function AboutPage() {
                 }`}
                 style={{ transitionDelay: `${i * 150}ms` }}
               >
-                <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-3">
+                <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-3">
                   {item.label}
                 </p>
                 <p className="font-playfair text-lg text-njinga-white leading-relaxed">
@@ -314,7 +327,7 @@ export default function AboutPage() {
                     <Icon size={24} className="text-gold" />
                   </div>
                   <h4 className="font-playfair text-lg font-bold text-njinga-white mb-3">{v.title}</h4>
-                  <p className="font-inter text-njinga-white/50 text-sm leading-relaxed">{v.desc}</p>
+                  <p className="font-inter text-njinga-white/70 text-sm leading-relaxed">{v.desc}</p>
                 </div>
               )
             })}
@@ -353,9 +366,9 @@ export default function AboutPage() {
                   >
                     {/* Content */}
                     <div className={`flex-1 md:w-[calc(50%-2rem)] pl-16 md:pl-0 ${isLeft ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
-                      <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-1">{m.year}</p>
+                      <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-1">{m.year}</p>
                       <h4 className="font-playfair text-xl font-bold text-njinga-white mb-2">{m.title}</h4>
-                      <p className="font-inter text-njinga-white/50 text-sm leading-relaxed">{m.desc}</p>
+                      <p className="font-inter text-njinga-white/70 text-sm leading-relaxed">{m.desc}</p>
                     </div>
 
                     {/* Dot */}
@@ -380,7 +393,7 @@ export default function AboutPage() {
               A Nossa{' '}
               <span className="text-gold italic">Equipa</span>
             </h2>
-            <p className="font-inter text-njinga-white/50 max-w-lg mx-auto text-sm">
+            <p className="font-inter text-njinga-white/70 max-w-lg mx-auto text-sm">
               32 profissionais dedicados a fazer de cada estadia uma experiência única.
               Conheça quem lidera o Hotel Rainha Njinga.
             </p>
@@ -402,19 +415,23 @@ export default function AboutPage() {
                   <img
                     src={member.image}
                     alt={member.name}
+                    width={400}
+                    height={533}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-64 object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-njinga-black/70 via-transparent to-transparent" />
                   <div className="absolute inset-0 border border-transparent group-hover:border-gold/30 transition-all duration-300 pointer-events-none" />
                 </div>
                 <div>
-                  <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-1">
+                  <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-1">
                     {member.role}
                   </p>
                   <h4 className="font-playfair text-lg font-bold text-njinga-white mb-2">
                     {member.name}
                   </h4>
-                  <p className="font-inter text-njinga-white/45 text-xs leading-relaxed">
+                  <p className="font-inter text-njinga-white/70 text-xs leading-relaxed">
                     {member.bio}
                   </p>
                 </div>
@@ -434,7 +451,7 @@ export default function AboutPage() {
                 Por que escolher o{' '}
                 <span className="text-gold italic">Hotel Rainha Njinga?</span>
               </h2>
-              <p className="font-inter text-njinga-white/55 text-sm leading-relaxed mb-8">
+              <p className="font-inter text-njinga-white/70 text-sm leading-relaxed mb-8">
                 Mais do que um hotel, somos uma experiência cultural. Cada detalhe foi pensado
                 para que sinta a alma de Angola ao mesmo tempo que desfruta de todo o conforto moderno.
               </p>
@@ -453,7 +470,7 @@ export default function AboutPage() {
                       </div>
                       <div>
                         <h4 className="font-playfair font-bold text-njinga-white mb-1">{item.title}</h4>
-                        <p className="font-inter text-njinga-white/50 text-sm leading-relaxed">{item.desc}</p>
+                        <p className="font-inter text-njinga-white/70 text-sm leading-relaxed">{item.desc}</p>
                       </div>
                     </div>
                   )
@@ -465,21 +482,37 @@ export default function AboutPage() {
               <img
                 src="/images/hotel/IMG_8982.jpeg"
                 alt="Suite Premium — Hotel Rainha Njinga"
+                width={1280}
+                height={853}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-56 object-cover"
               />
               <img
                 src="/images/hotel/IMG_8981.jpeg"
                 alt="Restaurante Njinga"
+                width={1280}
+                height={853}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-56 object-cover mt-8"
               />
               <img
                 src="/images/hotel/IMG_8983.jpeg"
                 alt="Bar do Hotel Rainha Njinga"
+                width={1280}
+                height={853}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-48 object-cover"
               />
               <img
                 src="/images/hotel/IMG_8990.jpeg"
                 alt="Sala de Eventos — Hotel Rainha Njinga"
+                width={1280}
+                height={853}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-48 object-cover mt-8"
               />
             </div>
@@ -495,7 +528,7 @@ export default function AboutPage() {
             A sua estadia{' '}
             <span className="text-gold italic">começa aqui</span>
           </h2>
-          <p className="font-inter text-njinga-white/45 text-sm mb-8">
+          <p className="font-inter text-njinga-white/70 text-sm mb-8">
             Reserve o seu quarto ou contacte-nos para qualquer informação.
             Teremos muito gosto em recebê-lo.
           </p>

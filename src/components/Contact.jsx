@@ -71,7 +71,7 @@ export default function Contact() {
             Entre em{' '}
             <span className="text-gold italic">Contacto</span>
           </h2>
-          <p className="font-inter text-njinga-white/55 max-w-xl mx-auto text-base">
+          <p className="font-inter text-njinga-white/70 max-w-xl mx-auto text-base">
             A nossa equipa está disponível 24 horas por dia para ajudar na sua reserva
             ou responder a qualquer questão.
           </p>
@@ -97,7 +97,7 @@ export default function Contact() {
                   <info.icon size={17} className="text-gold" />
                 </div>
                 <div>
-                  <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-1">
+                  <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-1">
                     {info.title}
                   </p>
                   {info.lines.map((line, i) => (
@@ -150,12 +150,12 @@ export default function Contact() {
                 </div>
                 <div className="mt-2 bg-njinga-black/90 border border-gold/40 px-3 py-1.5 text-center">
                   <p className="font-playfair text-xs text-gold font-semibold">Hotel Rainha Njinga</p>
-                  <p className="font-inter text-[10px] text-njinga-white/55 mt-0.5">Morro Bento, Luanda</p>
+                  <p className="font-inter text-[10px] text-njinga-white/70 mt-0.5">Morro Bento, Luanda</p>
                 </div>
               </div>
 
               <div className="absolute top-3 left-3 bg-njinga-black/80 border border-gold/20 px-2 py-1">
-                <p className="font-inter text-[10px] text-gold/60 tracking-wider uppercase">Localização</p>
+                <p className="font-inter text-[10px] text-gold tracking-wider uppercase">Localização</p>
               </div>
             </div>
           </div>
@@ -170,7 +170,7 @@ export default function Contact() {
               <h3 className="font-playfair text-2xl font-bold text-njinga-white mb-1">
                 Pedido de Reserva
               </h3>
-              <p className="font-inter text-sm text-njinga-white/45 mb-8">
+              <p className="font-inter text-sm text-njinga-white/70 mb-8">
                 Preencha o formulário e entraremos em contacto em menos de 24 horas.
               </p>
 
@@ -182,7 +182,7 @@ export default function Contact() {
                   <h4 className="font-playfair text-2xl font-bold text-njinga-white mb-3">
                     Mensagem Enviada!
                   </h4>
-                  <p className="font-inter text-njinga-white/55 text-sm max-w-xs">
+                  <p className="font-inter text-njinga-white/70 text-sm max-w-xs">
                     Obrigado pelo seu contacto. A nossa equipa responderá em breve.
                   </p>
                 </div>
@@ -190,10 +190,11 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-2">
+                      <label htmlFor="contact-name" className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-2">
                         Nome Completo *
                       </label>
                       <input
+                        id="contact-name"
                         type="text"
                         name="name"
                         value={form.name}
@@ -204,10 +205,11 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <label className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-2">
+                      <label htmlFor="contact-email" className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-2">
                         Email *
                       </label>
                       <input
+                        id="contact-email"
                         type="email"
                         name="email"
                         value={form.email}
@@ -221,10 +223,11 @@ export default function Contact() {
 
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-2">
+                      <label htmlFor="contact-phone" className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-2">
                         Telefone
                       </label>
                       <input
+                        id="contact-phone"
                         type="tel"
                         name="phone"
                         value={form.phone}
@@ -234,10 +237,11 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <label className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-2">
+                      <label htmlFor="contact-guests" className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-2">
                         Nº de Hóspedes
                       </label>
                       <select
+                        id="contact-guests"
                         name="guests"
                         value={form.guests}
                         onChange={handleChange}
@@ -254,10 +258,11 @@ export default function Contact() {
 
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-2">
+                      <label htmlFor="contact-checkin" className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-2">
                         Check-in
                       </label>
                       <input
+                        id="contact-checkin"
                         type="date"
                         name="checkin"
                         value={form.checkin}
@@ -266,10 +271,11 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <label className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-2">
+                      <label htmlFor="contact-checkout" className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-2">
                         Check-out
                       </label>
                       <input
+                        id="contact-checkout"
                         type="date"
                         name="checkout"
                         value={form.checkout}
@@ -280,10 +286,11 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-2">
+                    <label htmlFor="contact-message" className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-2">
                       Mensagem
                     </label>
                     <textarea
+                      id="contact-message"
                       name="message"
                       value={form.message}
                       onChange={handleChange}

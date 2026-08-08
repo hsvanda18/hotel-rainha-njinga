@@ -41,6 +41,10 @@ function ImageCarousel({ images, name }) {
           key={i}
           src={src}
           alt={`${name} - foto ${i + 1}`}
+          width={1280}
+          height={853}
+          loading="lazy"
+          decoding="async"
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
             i === current ? 'opacity-100' : 'opacity-0'
           }`}
@@ -81,14 +85,14 @@ function AmenitiesGrid({ amenities }) {
     <div className="grid grid-cols-2 gap-6 mt-6">
       {Object.entries(amenities).map(([key, items]) => (
         <div key={key}>
-          <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold/70 mb-2">
+          <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-2">
             {AMENITY_LABELS[key]}
           </p>
           <ul className="space-y-1">
             {items.map((item) => (
               <li key={item} className="flex items-start gap-2">
                 <Check size={11} className="text-gold mt-0.5 flex-shrink-0" />
-                <span className="font-inter text-xs text-njinga-white/60">{item}</span>
+                <span className="font-inter text-xs text-njinga-white/70">{item}</span>
               </li>
             ))}
           </ul>
@@ -120,7 +124,7 @@ function RoomCard({ room }) {
         {/* Header */}
         <div className="flex items-start justify-between mb-4">
           <div>
-            <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-1">
+            <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-1">
               {room.type}
             </p>
             <h3 className="font-playfair text-2xl font-bold text-njinga-white">
@@ -128,10 +132,10 @@ function RoomCard({ room }) {
             </h3>
           </div>
           <div className="text-right">
-            <p className="font-inter text-[10px] text-njinga-white/40 uppercase tracking-wider">A partir de</p>
+            <p className="font-inter text-[10px] text-njinga-white/70 uppercase tracking-wider">A partir de</p>
             <p className="font-playfair text-3xl font-bold text-gold leading-none">
               Kz {room.price}
-              <span className="font-inter text-xs font-normal text-njinga-white/40">/noite</span>
+              <span className="font-inter text-xs font-normal text-njinga-white/70">/noite</span>
             </p>
           </div>
         </div>
@@ -164,7 +168,7 @@ function RoomCard({ room }) {
           </div>
         </div>
 
-        <p className="font-inter text-njinga-white/50 text-sm leading-relaxed mb-5">
+        <p className="font-inter text-njinga-white/70 text-sm leading-relaxed mb-5">
           {room.desc}
         </p>
 
@@ -173,7 +177,7 @@ function RoomCard({ room }) {
           {room.features.map((f) => (
             <div key={f} className="flex items-center gap-2">
               <Check size={11} className="text-gold flex-shrink-0" />
-              <span className="font-inter text-xs text-njinga-white/55">{f}</span>
+              <span className="font-inter text-xs text-njinga-white/70">{f}</span>
             </div>
           ))}
         </div>
@@ -181,7 +185,7 @@ function RoomCard({ room }) {
         {/* Expand toggle */}
         <button
           onClick={() => setExpanded(!expanded)}
-          className="font-inter text-xs text-gold/70 hover:text-gold tracking-wider uppercase flex items-center gap-1.5 mb-5 transition-colors duration-200"
+          className="font-inter text-xs text-gold hover:text-gold tracking-wider uppercase flex items-center gap-1.5 mb-5 transition-colors duration-200"
         >
           {expanded ? 'Ocultar detalhes' : 'Ver todos os detalhes'}
           <ChevronRight
@@ -226,7 +230,7 @@ function RoomCard({ room }) {
           </button>
           <a
             href="tel:+244923456789"
-            className="flex items-center justify-center gap-2 py-3 px-4 border border-njinga-gray/40 text-njinga-white/50 hover:border-gold/30 hover:text-gold font-inter text-sm transition-all duration-300"
+            className="flex items-center justify-center gap-2 py-3 px-4 border border-njinga-gray/40 text-njinga-white/70 hover:border-gold/30 hover:text-gold font-inter text-sm transition-all duration-300"
           >
             <Phone size={15} />
           </a>
@@ -264,6 +268,11 @@ export default function RoomsPage() {
           <img
             src="/images/hotel/IMG_8978.jpeg"
             alt="Quartos do Hotel Rainha Njinga"
+            width={1280}
+            height={853}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-njinga-black/60 via-njinga-charcoal/80 to-njinga-charcoal" />
@@ -276,7 +285,7 @@ export default function RoomsPage() {
               Os Nossos{' '}
               <span className="text-gold italic">Quartos</span>
             </h1>
-            <p className="font-inter text-njinga-white/55 max-w-xl text-base mb-8">
+            <p className="font-inter text-njinga-white/70 max-w-xl text-base mb-8">
               {rooms.length} tipos de acomodação cuidadosamente decorados para proporcionar
               o máximo conforto com a elegância da cultura angolana.
             </p>
@@ -324,10 +333,10 @@ export default function RoomsPage() {
 
             {/* Sort */}
             <div className="flex items-center gap-3">
-              <span className="font-inter text-xs text-njinga-white/30 uppercase tracking-wider">Ordenar:</span>
+              <span className="font-inter text-xs text-njinga-white/70 uppercase tracking-wider">Ordenar:</span>
               <button
                 onClick={() => setSortByPrice((s) => (s === 'asc' ? 'desc' : 'asc'))}
-                className="font-inter text-xs text-gold/70 hover:text-gold tracking-wider uppercase flex items-center gap-1.5 transition-colors duration-200"
+                className="font-inter text-xs text-gold hover:text-gold tracking-wider uppercase flex items-center gap-1.5 transition-colors duration-200"
               >
                 Preço {sortByPrice === 'asc' ? '↑' : '↓'}
               </button>
@@ -340,7 +349,7 @@ export default function RoomsPage() {
       <section className="py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {filtered.length === 0 ? (
-            <p className="text-center text-njinga-white/40 font-inter py-20">
+            <p className="text-center text-njinga-white/70 font-inter py-20">
               Nenhum quarto encontrado.
             </p>
           ) : (
@@ -353,10 +362,10 @@ export default function RoomsPage() {
 
           {/* Bottom CTA */}
           <div className="text-center mt-20 py-12 border-t border-njinga-gray/20">
-            <p className="font-inter text-njinga-white/40 text-sm mb-3">
+            <p className="font-inter text-njinga-white/70 text-sm mb-3">
               Grupo ou estadia prolongada? Temos tarifas especiais.
             </p>
-            <p className="font-inter text-njinga-white/25 text-xs mb-6">
+            <p className="font-inter text-njinga-white/70 text-xs mb-6">
               Contacte-nos directamente para obter a melhor oferta personalizada.
             </p>
             <div className="flex items-center justify-center gap-4 flex-wrap">

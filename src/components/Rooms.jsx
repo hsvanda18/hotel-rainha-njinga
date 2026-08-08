@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BedDouble, Users, Maximize2, Wifi, ChevronRight, Check } from 'lucide-react'
 import { rooms } from '../data/rooms.json'
+import OptimizedImage from './OptimizedImage'
 
 function RoomCard({ room, index, visible }) {
   const [hovered, setHovered] = useState(false)
@@ -30,9 +31,10 @@ function RoomCard({ room, index, visible }) {
 
       {/* Image */}
       <div className="relative h-64 overflow-hidden">
-        <img
+        <OptimizedImage
           src={room.image}
           alt={room.name}
+          loading="lazy"
           className="w-full h-full object-cover transition-transform duration-700"
           style={{ transform: hovered ? 'scale(1.08)' : 'scale(1)' }}
         />
@@ -40,10 +42,10 @@ function RoomCard({ room, index, visible }) {
 
         {/* Price overlay */}
         <div className="absolute bottom-4 right-4 text-right">
-          <p className="font-inter text-[10px] text-njinga-white/60 uppercase tracking-wider mb-0.5">A partir de</p>
+          <p className="font-inter text-[10px] text-njinga-white/70 uppercase tracking-wider mb-0.5">A partir de</p>
           <p className="font-playfair text-3xl font-bold text-gold leading-none drop-shadow-lg">
             Kz {room.price}
-            <span className="font-inter text-sm font-normal text-njinga-white/50">/noite</span>
+            <span className="font-inter text-sm font-normal text-njinga-white/70">/noite</span>
           </p>
         </div>
       </div>
@@ -51,7 +53,7 @@ function RoomCard({ room, index, visible }) {
       {/* Content */}
       <div className="p-6">
         <div className="mb-3">
-          <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-1">
+          <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-1">
             {room.type}
           </p>
           <h3 className="font-playfair text-2xl font-bold text-njinga-white">
@@ -75,7 +77,7 @@ function RoomCard({ room, index, visible }) {
           </div>
         </div>
 
-        <p className="font-inter text-njinga-white/55 text-sm leading-relaxed mb-5">
+        <p className="font-inter text-njinga-white/70 text-sm leading-relaxed mb-5">
           {room.desc}
         </p>
 
@@ -84,7 +86,7 @@ function RoomCard({ room, index, visible }) {
           {room.features.map((f) => (
             <div key={f} className="flex items-center gap-2">
               <Check size={12} className="text-gold flex-shrink-0" />
-              <span className="font-inter text-xs text-njinga-white/60">{f}</span>
+              <span className="font-inter text-xs text-njinga-white/70">{f}</span>
             </div>
           ))}
         </div>
@@ -134,7 +136,7 @@ export default function Rooms() {
             Os Nossos{' '}
             <span className="text-gold italic">Quartos</span>
           </h2>
-          <p className="font-inter text-njinga-white/55 max-w-xl mx-auto text-base">
+          <p className="font-inter text-njinga-white/70 max-w-xl mx-auto text-base">
             Cada quarto foi cuidadosamente decorado para proporcionar o máximo conforto
             e refletir a elegância da cultura angolana.
           </p>
@@ -155,7 +157,7 @@ export default function Rooms() {
             visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <p className="font-inter text-njinga-white/40 text-sm mb-5">
+          <p className="font-inter text-njinga-white/70 text-sm mb-5">
             Tarifas especiais disponíveis para estadias prolongadas e grupos
           </p>
           <div className="flex items-center justify-center gap-4 flex-wrap">

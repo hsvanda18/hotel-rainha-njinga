@@ -43,11 +43,11 @@ function SpaceCard({ space, active, onClick }) {
         </span>
       </div>
       <div className="flex items-center gap-4">
-        <div className="flex items-center gap-1.5 text-njinga-white/40">
+        <div className="flex items-center gap-1.5 text-njinga-white/70">
           <Maximize2 size={11} className="text-gold/50" />
           <span className="font-inter text-xs">{space.size}</span>
         </div>
-        <div className="flex items-center gap-1.5 text-njinga-white/40">
+        <div className="flex items-center gap-1.5 text-njinga-white/70">
           <Users size={11} className="text-gold/50" />
           <span className="font-inter text-xs">
             até {Math.max(...Object.values(space.capacity).filter(Boolean))} pessoas
@@ -65,17 +65,21 @@ function SpaceDetail({ space }) {
         <img
           src={space.image}
           alt={space.name}
+          width={1280}
+          height={853}
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-njinga-charcoal via-njinga-charcoal/20 to-transparent" />
         <div className="absolute bottom-5 left-6">
-          <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold/70 mb-1">Espaço</p>
+          <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-1">Espaço</p>
           <h3 className="font-playfair text-3xl font-bold text-njinga-white">{space.name}</h3>
         </div>
       </div>
 
       <div className="p-7">
-        <p className="font-inter text-njinga-white/50 text-sm leading-relaxed mb-6">
+        <p className="font-inter text-njinga-white/70 text-sm leading-relaxed mb-6">
           {space.desc}
         </p>
 
@@ -85,7 +89,7 @@ function SpaceDetail({ space }) {
             val ? (
               <div key={key} className="bg-njinga-black/50 border border-njinga-gray/20 p-3 text-center">
                 <p className="font-playfair text-2xl font-bold text-gold">{val}</p>
-                <p className="font-inter text-[10px] text-njinga-white/35 uppercase tracking-wider mt-0.5">
+                <p className="font-inter text-[10px] text-njinga-white/70 uppercase tracking-wider mt-0.5">
                   {CAPACITY_LABELS[key]}
                 </p>
               </div>
@@ -94,14 +98,14 @@ function SpaceDetail({ space }) {
         </div>
 
         {/* Features */}
-        <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-3">
+        <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-3">
           Equipamento & Características
         </p>
         <div className="grid grid-cols-2 gap-2">
           {space.features.map((f) => (
             <div key={f} className="flex items-start gap-2">
               <Check size={12} className="text-gold mt-0.5 flex-shrink-0" />
-              <span className="font-inter text-xs text-njinga-white/55">{f}</span>
+              <span className="font-inter text-xs text-njinga-white/70">{f}</span>
             </div>
           ))}
         </div>
@@ -128,8 +132,13 @@ export default function EventsPage() {
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1600&q=80&auto=format&fit=crop"
+            src="/images/hotel/IMG_8996.jpeg"
             alt="Eventos & Reuniões"
+            width={1280}
+            height={853}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-njinga-black/70 via-njinga-black/60 to-njinga-black" />
@@ -142,7 +151,7 @@ export default function EventsPage() {
               Eventos &{' '}
               <span className="text-gold italic">Reuniões</span>
             </h1>
-            <p className="font-inter text-njinga-white/60 text-base leading-relaxed mb-8 max-w-lg">
+            <p className="font-inter text-njinga-white/70 text-base leading-relaxed mb-8 max-w-lg">
               Espaços versáteis e equipados para os seus momentos mais importantes.
               Do encontro executivo à celebração que nunca será esquecida.
             </p>
@@ -186,7 +195,7 @@ export default function EventsPage() {
               Escolha o{' '}
               <span className="text-gold italic">Espaço Ideal</span>
             </h2>
-            <p className="font-inter text-njinga-white/50 max-w-lg mx-auto text-sm">
+            <p className="font-inter text-njinga-white/70 max-w-lg mx-auto text-sm">
               Cada espaço foi concebido para diferentes tipos de evento, com toda a flexibilidade
               e equipamento que necessita.
             </p>
@@ -209,7 +218,7 @@ export default function EventsPage() {
 
               {/* Quick contact */}
               <div className="bg-gold/5 border border-gold/20 p-5 mt-4">
-                <p className="font-inter text-xs text-njinga-white/50 leading-relaxed mb-3">
+                <p className="font-inter text-xs text-njinga-white/70 leading-relaxed mb-3">
                   Precisa de uma configuração personalizada ou tem dúvidas sobre os espaços?
                 </p>
                 <a
@@ -258,14 +267,14 @@ export default function EventsPage() {
                   <h3 className="font-playfair text-lg font-bold text-njinga-white mb-3 leading-snug">
                     {type.name}
                   </h3>
-                  <p className="font-inter text-xs text-njinga-white/45 leading-relaxed mb-5">
+                  <p className="font-inter text-xs text-njinga-white/70 leading-relaxed mb-5">
                     {type.desc}
                   </p>
                   <ul className="space-y-2">
                     {type.items.map((item) => (
                       <li key={item} className="flex items-start gap-2">
                         <Check size={11} className="text-gold mt-0.5 flex-shrink-0" />
-                        <span className="font-inter text-[11px] text-njinga-white/50">{item}</span>
+                        <span className="font-inter text-[11px] text-njinga-white/70">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -286,7 +295,7 @@ export default function EventsPage() {
                 Equipamento{' '}
                 <span className="text-gold italic">Profissional</span>
               </h2>
-              <p className="font-inter text-njinga-white/50 text-sm leading-relaxed mb-8">
+              <p className="font-inter text-njinga-white/70 text-sm leading-relaxed mb-8">
                 Todos os nossos espaços estão equipados com tecnologia de ponta para garantir
                 que a sua apresentação, reunião ou evento decorra sem contratempos.
                 O nosso técnico de audiovisual está disponível durante todo o evento.
@@ -314,7 +323,7 @@ export default function EventsPage() {
                         {item.name}
                       </p>
                     </div>
-                    <p className="font-inter text-[11px] text-njinga-white/35 leading-relaxed">
+                    <p className="font-inter text-[11px] text-njinga-white/70 leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
@@ -334,7 +343,7 @@ export default function EventsPage() {
               Pacotes &{' '}
               <span className="text-gold italic">Preços</span>
             </h2>
-            <p className="font-inter text-njinga-white/50 max-w-lg mx-auto text-sm">
+            <p className="font-inter text-njinga-white/70 max-w-lg mx-auto text-sm">
               Soluções pensadas para diferentes necessidades. Todos os pacotes incluem
               coordenação, estacionamento e suporte técnico.
             </p>
@@ -362,7 +371,7 @@ export default function EventsPage() {
                 )}
 
                 <div className="p-8 flex-1">
-                  <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-1">
+                  <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-1">
                     {pkg.unit}
                   </p>
                   <h3 className="font-playfair text-2xl font-bold text-njinga-white mb-1">
@@ -373,25 +382,25 @@ export default function EventsPage() {
                       <p className="font-playfair text-2xl font-bold text-gold">Sob consulta</p>
                     ) : (
                       <>
-                        <p className="font-inter text-xs text-njinga-white/35">A partir de</p>
+                        <p className="font-inter text-xs text-njinga-white/70">A partir de</p>
                         <p className="font-playfair text-3xl font-bold text-gold">Kz {pkg.price}</p>
                       </>
                     )}
                   </div>
 
-                  <p className="font-inter text-xs text-njinga-white/45 mb-6 leading-relaxed">
+                  <p className="font-inter text-xs text-njinga-white/70 mb-6 leading-relaxed">
                     {pkg.desc}
                   </p>
 
                   <div className="border-t border-njinga-gray/20 pt-5">
-                    <p className="font-inter text-[10px] tracking-[0.15em] uppercase text-gold/50 mb-3">
+                    <p className="font-inter text-[10px] tracking-[0.15em] uppercase text-gold mb-3">
                       Inclui
                     </p>
                     <ul className="space-y-2.5">
                       {pkg.includes.map((item) => (
                         <li key={item} className="flex items-start gap-2.5">
                           <Check size={12} className="text-gold mt-0.5 flex-shrink-0" />
-                          <span className="font-inter text-xs text-njinga-white/55">{item}</span>
+                          <span className="font-inter text-xs text-njinga-white/70">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -415,7 +424,7 @@ export default function EventsPage() {
             ))}
           </div>
 
-          <p className="font-inter text-[11px] text-njinga-white/25 text-center mt-8">
+          <p className="font-inter text-[11px] text-njinga-white/70 text-center mt-8">
             Preços em AOA, sujeitos a IVA. Pacotes personalizados disponíveis mediante consulta.
           </p>
         </div>
@@ -429,7 +438,7 @@ export default function EventsPage() {
             Vamos planear o seu{' '}
             <span className="text-gold italic">evento</span>
           </h2>
-          <p className="font-inter text-njinga-white/45 text-sm mb-8">
+          <p className="font-inter text-njinga-white/70 text-sm mb-8">
             A nossa equipa de coordenação está disponível para criar uma proposta
             personalizada para o seu evento.
           </p>

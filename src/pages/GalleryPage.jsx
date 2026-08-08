@@ -40,17 +40,19 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
         <img
           src={img.src}
           alt={img.alt}
+          loading="eager"
+          decoding="async"
           className="max-h-[78vh] max-w-full object-contain mx-auto block"
         />
 
         <div className="mt-4 flex items-center justify-between w-full px-2">
           <div>
             <p className="font-playfair text-njinga-white text-lg">{img.label}</p>
-            <p className="font-inter text-njinga-white/30 text-[11px] uppercase tracking-wider mt-0.5">
+            <p className="font-inter text-njinga-white/70 text-[11px] uppercase tracking-wider mt-0.5">
               {categories.find((c) => c.key === img.category)?.label}
             </p>
           </div>
-          <p className="font-inter text-njinga-white/35 text-xs tracking-widest">
+          <p className="font-inter text-njinga-white/70 text-xs tracking-widest">
             {index + 1} / {images.length}
           </p>
         </div>
@@ -114,8 +116,13 @@ export default function GalleryPage() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80&auto=format&fit=crop"
+            src="/images/hotel/IMG_8986.jpeg"
             alt="Galeria"
+            width={1280}
+            height={853}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-njinga-black/70 via-njinga-black/60 to-njinga-black" />
@@ -128,11 +135,11 @@ export default function GalleryPage() {
               O Hotel em{' '}
               <span className="text-gold italic">Imagens</span>
             </h1>
-            <p className="font-inter text-njinga-white/55 max-w-xl text-base mb-6">
+            <p className="font-inter text-njinga-white/70 max-w-xl text-base mb-6">
               Descubra os espaços, a gastronomia e os momentos que tornam a sua estadia
               no Hotel Rainha Njinga uma experiência única.
             </p>
-            <div className="flex items-center gap-2 text-njinga-white/35">
+            <div className="flex items-center gap-2 text-njinga-white/70">
               <Images size={14} className="text-gold/60" />
               <span className="font-inter text-xs tracking-wider">{galleryImages.length} fotografias</span>
             </div>
@@ -163,7 +170,7 @@ export default function GalleryPage() {
                 >
                   {cat.label}
                   <span className={`font-inter text-[10px] px-1.5 py-0.5 rounded-full ${
-                    activeCategory === cat.key ? 'bg-njinga-black/20 text-njinga-black' : 'bg-njinga-gray/40 text-njinga-white/30'
+                    activeCategory === cat.key ? 'bg-njinga-black/20 text-njinga-black' : 'bg-njinga-gray/40 text-njinga-white/70'
                   }`}>
                     {count}
                   </span>
@@ -178,7 +185,7 @@ export default function GalleryPage() {
       <section className="py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {filtered.length === 0 ? (
-            <p className="text-center text-njinga-white/30 font-inter py-24">
+            <p className="text-center text-njinga-white/70 font-inter py-24">
               Sem fotografias nesta categoria.
             </p>
           ) : (
@@ -192,8 +199,11 @@ export default function GalleryPage() {
                   <img
                     src={img.thumb}
                     alt={img.alt}
+                    width={1280}
+                    height={853}
                     className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
+                    decoding="async"
                   />
 
                   {/* Overlay */}
@@ -229,7 +239,7 @@ export default function GalleryPage() {
 
           {/* Bottom */}
           <div className="text-center mt-20 pt-12 border-t border-njinga-gray/20">
-            <p className="font-inter text-njinga-white/30 text-xs mb-6">
+            <p className="font-inter text-njinga-white/70 text-xs mb-6">
               Interessado em visitar o hotel? Reserve a sua estadia.
             </p>
             <div className="flex items-center justify-center gap-4 flex-wrap">

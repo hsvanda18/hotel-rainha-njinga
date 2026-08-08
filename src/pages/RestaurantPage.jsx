@@ -26,7 +26,7 @@ const BADGE_STYLES = {
 
 function Badge({ label }) {
   return (
-    <span className={`font-inter text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 ${BADGE_STYLES[label] || 'bg-njinga-gray/40 text-njinga-white/50 border border-njinga-gray/50'}`}>
+    <span className={`font-inter text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 ${BADGE_STYLES[label] || 'bg-njinga-gray/40 text-njinga-white/70 border border-njinga-gray/50'}`}>
       {label}
     </span>
   )
@@ -46,7 +46,7 @@ function MenuItem({ item }) {
             </span>
           )}
         </div>
-        <p className="font-inter text-xs text-njinga-white/45 leading-relaxed mb-2">
+        <p className="font-inter text-xs text-njinga-white/70 leading-relaxed mb-2">
           {item.desc}
         </p>
         {item.badges?.length > 0 && (
@@ -80,8 +80,13 @@ export default function RestaurantPage() {
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80&auto=format&fit=crop"
+            src="/images/hotel/IMG_8981.jpeg"
             alt="Restaurante Njinga"
+            width={1280}
+            height={853}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             className="w-full h-full object-cover opacity-25"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-njinga-black/70 via-njinga-black/60 to-njinga-black" />
@@ -94,7 +99,7 @@ export default function RestaurantPage() {
               Restaurante{' '}
               <span className="text-gold italic">Njinga</span>
             </h1>
-            <p className="font-inter text-njinga-white/60 text-base leading-relaxed mb-8 max-w-lg">
+            <p className="font-inter text-njinga-white/70 text-base leading-relaxed mb-8 max-w-lg">
               Uma viagem pelos sabores autênticos de Angola e do mundo. Cozinha contemporânea
               que honra as raízes e celebra a cultura angolana.
             </p>
@@ -135,13 +140,13 @@ export default function RestaurantPage() {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Info cards */}
             <div>
-              <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-5">
+              <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-5">
                 O Espaço
               </p>
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {highlights.map((h) => (
                   <div key={h.label} className="bg-njinga-black/40 border border-njinga-gray/30 p-5">
-                    <p className="font-inter text-[10px] tracking-[0.15em] uppercase text-njinga-white/35 mb-1">
+                    <p className="font-inter text-[10px] tracking-[0.15em] uppercase text-njinga-white/70 mb-1">
                       {h.label}
                     </p>
                     <p className="font-playfair text-lg font-bold text-njinga-white">
@@ -156,16 +161,20 @@ export default function RestaurantPage() {
                   <img
                     src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=200&q=80&auto=format&fit=crop"
                     alt="Chef João Kimbembe"
+                    width={64}
+                    height={64}
+                    loading="lazy"
+                    decoding="async"
                     className="w-16 h-16 object-cover flex-shrink-0"
                   />
                   <div>
-                    <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-1">
+                    <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-1">
                       Chef Executivo
                     </p>
                     <p className="font-playfair text-lg font-bold text-njinga-white mb-1">
                       João Kimbembe
                     </p>
-                    <p className="font-inter text-xs text-njinga-white/45 leading-relaxed">
+                    <p className="font-inter text-xs text-njinga-white/70 leading-relaxed">
                       Formado em Paris, especialista em cozinha angolana contemporânea com 15 anos de experiência
                       em restaurantes de referência em Lisboa e Luanda.
                     </p>
@@ -176,7 +185,7 @@ export default function RestaurantPage() {
 
             {/* Hours */}
             <div>
-              <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-5">
+              <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-5">
                 Horários
               </p>
               <div className="space-y-0">
@@ -189,7 +198,7 @@ export default function RestaurantPage() {
                       <p className="font-inter font-semibold text-sm text-njinga-white">
                         {h.meal}
                       </p>
-                      <p className="font-inter text-[11px] text-njinga-white/35">{h.days}</p>
+                      <p className="font-inter text-[11px] text-njinga-white/70">{h.days}</p>
                     </div>
                     <p className="font-playfair text-base text-gold font-bold">
                       {h.time}
@@ -199,7 +208,7 @@ export default function RestaurantPage() {
               </div>
 
               <div className="mt-6 bg-gold/5 border border-gold/20 p-5">
-                <p className="font-inter text-xs text-njinga-white/50 leading-relaxed">
+                <p className="font-inter text-xs text-njinga-white/70 leading-relaxed">
                   <span className="text-gold font-semibold">Reservas recomendadas</span> para jantar.
                   Para grupos de 8 ou mais pessoas, contacte-nos com antecedência mínima de 48h.
                 </p>
@@ -218,7 +227,7 @@ export default function RestaurantPage() {
               A Nossa{' '}
               <span className="text-gold italic">Ementa</span>
             </h2>
-            <p className="font-inter text-njinga-white/50 max-w-lg mx-auto text-sm">
+            <p className="font-inter text-njinga-white/70 max-w-lg mx-auto text-sm">
               Ingredientes frescos, fornecedores locais angolanos e receitas que atravessam gerações.
             </p>
             <div className="section-divider mt-8">
@@ -261,7 +270,7 @@ export default function RestaurantPage() {
             </div>
           </div>
 
-          <p className="font-inter text-[11px] text-njinga-white/25 text-center mt-10">
+          <p className="font-inter text-[11px] text-njinga-white/70 text-center mt-10">
             Os preços estão em AOA e não incluem IVA. Ementa sujeita a alterações sazonais.
           </p>
         </div>
@@ -277,7 +286,7 @@ export default function RestaurantPage() {
                 Bar &{' '}
                 <span className="text-gold italic">Lounge</span>
               </h2>
-              <p className="font-inter text-njinga-white/50 text-sm leading-relaxed mb-6">
+              <p className="font-inter text-njinga-white/70 text-sm leading-relaxed mb-6">
                 O coração social do Hotel Rainha Njinga. Um espaço íntimo com vista para a cidade
                 onde a música ao vivo, os cocktails de autor e a companhia certa se encontram
                 todas as noites.
@@ -291,7 +300,7 @@ export default function RestaurantPage() {
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="text-gold mt-0.5 flex-shrink-0">◆</span>
-                    <span className="font-inter text-sm text-njinga-white/55">{item}</span>
+                    <span className="font-inter text-sm text-njinga-white/70">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -306,23 +315,39 @@ export default function RestaurantPage() {
 
             <div className="grid grid-cols-2 gap-3">
               <img
-                src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=600&q=80&auto=format&fit=crop"
+                src="/images/hotel/IMG_8994.jpeg"
                 alt="Bar do hotel"
+                width={1280}
+                height={853}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-56 object-cover"
               />
               <img
-                src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600&q=80&auto=format&fit=crop"
+                src="/images/hotel/IMG_8983.jpeg"
                 alt="Cocktails do bar"
+                width={1280}
+                height={853}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-56 object-cover mt-6"
               />
               <img
-                src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&q=80&auto=format&fit=crop"
+                src="/images/hotel/IMG_8984.jpeg"
                 alt="Interior do restaurante"
+                width={1280}
+                height={853}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-48 object-cover"
               />
               <img
-                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80&auto=format&fit=crop"
+                src="/images/hotel/IMG_8999.jpeg"
                 alt="Prato do restaurante"
+                width={1280}
+                height={853}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-48 object-cover mt-6"
               />
             </div>
@@ -338,7 +363,7 @@ export default function RestaurantPage() {
             Uma experiência{' '}
             <span className="text-gold italic">inesquecível</span>
           </h2>
-          <p className="font-inter text-njinga-white/45 text-sm mb-8">
+          <p className="font-inter text-njinga-white/70 text-sm mb-8">
             Reserve a sua mesa ou ligue-nos para grupos e eventos especiais.
           </p>
           <div className="flex items-center justify-center gap-4 flex-wrap">

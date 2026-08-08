@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronDown, Star } from 'lucide-react'
 import homeData from '../data/home.json'
+import OptimizedImage from './OptimizedImage'
 
 const { slides, stats } = homeData.hero
 
@@ -33,10 +34,12 @@ export default function Hero() {
             transition: 'opacity 1500ms ease-in-out',
           }}
         >
-          <img
+          <OptimizedImage
             src={slide.url}
             alt={slide.alt}
             className="w-full h-full object-cover"
+            loading={i === 0 ? 'eager' : 'lazy'}
+            fetchPriority={i === 0 ? 'high' : 'auto'}
             style={{
               transform: i === currentSlide ? 'scale(1)' : 'scale(1.05)',
               transition: 'transform 8000ms ease-out',
@@ -118,7 +121,7 @@ export default function Hero() {
                 <React.Fragment key={stat.label}>
                   <div className="flex-1 text-center px-2 sm:px-4">
                     <p className="font-playfair text-xl sm:text-2xl font-bold text-gold leading-none">{stat.value}</p>
-                    <p className="font-inter text-[9px] sm:text-[10px] tracking-[0.15em] sm:tracking-[0.2em] uppercase text-njinga-white/50 mt-1.5">
+                    <p className="font-inter text-[9px] sm:text-[10px] tracking-[0.15em] sm:tracking-[0.2em] uppercase text-njinga-white/70 mt-1.5">
                       {stat.label}
                     </p>
                   </div>

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { MapPin, Shield, Clock, Award } from 'lucide-react'
 import homeData from '../data/home.json'
+import OptimizedImage from './OptimizedImage'
 
 const ICON_MAP = { MapPin, Shield, Clock, Award }
 const { features } = homeData.about
@@ -53,9 +54,10 @@ export default function About() {
 
               {/* Image container */}
               <div className="relative overflow-hidden">
-                <img
+                <OptimizedImage
                   src="/images/hotel/IMG_8977.jpeg"
                   alt="Hotel Rainha Njinga - Recepção"
+                  loading="lazy"
                   className="w-full h-80 lg:h-[500px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-njinga-black/50 via-transparent to-transparent" />
@@ -88,13 +90,13 @@ export default function About() {
               à sua disposição
             </h3>
 
-            <p className="font-inter text-njinga-white/65 text-base leading-relaxed mb-5">
+            <p className="font-inter text-njinga-white/70 text-base leading-relaxed mb-5">
               Inspirado na grandeza da Rainha Njinga Mbande, figura icónica da resistência angolana,
               o Hotel Rainha Njinga combina a rica herança cultural de Angola com o conforto moderno
               e a hospitalidade que nos define.
             </p>
 
-            <p className="font-inter text-njinga-white/65 text-base leading-relaxed mb-8">
+            <p className="font-inter text-njinga-white/70 text-base leading-relaxed mb-8">
               Com <strong className="text-gold font-semibold">52 quartos</strong> elegantemente decorados,
               distribuídos por <strong className="text-gold font-semibold">3 pisos</strong>, oferecemos uma
               experiência única a viajantes de negócios e lazer. Situado no prestigiado bairro
@@ -110,7 +112,7 @@ export default function About() {
               ].map((s, i) => (
                 <div key={s.l} className={`text-center ${i < 2 ? 'border-r border-gold/20' : ''}`}>
                   <p className="font-playfair text-3xl font-bold text-gold">{s.n}</p>
-                  <p className="font-inter text-[11px] uppercase tracking-widest text-njinga-white/50 mt-1">
+                  <p className="font-inter text-[11px] uppercase tracking-widest text-njinga-white/70 mt-1">
                     {s.l}
                   </p>
                 </div>
@@ -150,7 +152,7 @@ export default function About() {
               <h4 className="font-playfair text-xl font-semibold text-njinga-white mb-3">
                 {f.title}
               </h4>
-              <p className="font-inter text-njinga-white/55 text-sm leading-relaxed">
+              <p className="font-inter text-njinga-white/70 text-sm leading-relaxed">
                 {f.desc}
               </p>
             </div>

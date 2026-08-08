@@ -111,13 +111,17 @@ export default function Testimonials() {
                 <img
                   src={t.avatar}
                   alt={t.name}
+                  width={56}
+                  height={56}
+                  loading="lazy"
+                  decoding="async"
                   className="w-14 h-14 rounded-full object-cover border-2 border-gold/30"
                 />
                 <div>
                   <p className="font-playfair font-semibold text-njinga-white text-base">
                     {t.name}
                   </p>
-                  <p className="font-inter text-xs text-njinga-white/50 mt-0.5">{t.role}</p>
+                  <p className="font-inter text-xs text-njinga-white/70 mt-0.5">{t.role}</p>
                   <StarRating rating={t.rating} />
                 </div>
               </div>
@@ -126,7 +130,7 @@ export default function Testimonials() {
                 "{t.text}"
               </p>
 
-              <p className="font-inter text-xs text-gold/50 mt-4">{t.date}</p>
+              <p className="font-inter text-xs text-gold mt-4">{t.date}</p>
             </div>
           ))}
         </div>
@@ -140,13 +144,17 @@ export default function Testimonials() {
               <img
                 src={testimonials[active].avatar}
                 alt={testimonials[active].name}
+                width={56}
+                height={56}
+                loading="lazy"
+                decoding="async"
                 className="w-14 h-14 rounded-full object-cover border-2 border-gold/30"
               />
               <div>
                 <p className="font-playfair font-semibold text-njinga-white text-base">
                   {testimonials[active].name}
                 </p>
-                <p className="font-inter text-xs text-njinga-white/50 mt-0.5">
+                <p className="font-inter text-xs text-njinga-white/70 mt-0.5">
                   {testimonials[active].role}
                 </p>
                 <StarRating rating={testimonials[active].rating} />
@@ -156,7 +164,7 @@ export default function Testimonials() {
             <p className="font-inter text-njinga-white/70 text-sm leading-relaxed italic">
               "{testimonials[active].text}"
             </p>
-            <p className="font-inter text-xs text-gold/50 mt-4">{testimonials[active].date}</p>
+            <p className="font-inter text-xs text-gold mt-4">{testimonials[active].date}</p>
           </div>
 
           {/* Dots */}
@@ -186,7 +194,7 @@ export default function Testimonials() {
               ))}
             </div>
             <span className="font-playfair text-2xl font-bold text-gold">4.9</span>
-            <span className="font-inter text-sm text-njinga-white/60">/ 5.0 — 200+ avaliações</span>
+            <span className="font-inter text-sm text-njinga-white/70">/ 5.0 — 200+ avaliações</span>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@
       "id": "alimentacao",
       "label": "Alimentação & Bebidas",
       "desc": "Do pequeno-almoço ao jantar de gala, a gastronomia do Hotel Rainha Njinga é uma experiência em si mesma.",
-      "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&auto=format&fit=crop",
+      "image": "/images/hotel/IMG_8981.jpeg",
       "services": [
         {
           "id": "restaurante",
@@ -39,7 +39,7 @@
       "id": "negocios",
       "label": "Eventos & Negócios",
       "desc": "Infraestrutura completa para reuniões, conferências, apresentações e eventos corporativos de excelência.",
-      "image": "https://images.unsplash.com/photo-1462826303086-329426d1aef5?w=900&q=80&auto=format&fit=crop",
+      "image": "/images/hotel/IMG_8996.jpeg",
       "services": [
         {
           "id": "reunioes",
@@ -74,7 +74,7 @@
       "id": "bemestar",
       "label": "Bem-estar & Lazer",
       "desc": "Espaços pensados para que possa relaxar, manter a rotina de exercício e desfrutar do melhor de Luanda.",
-      "image": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=900&q=80&auto=format&fit=crop",
+      "image": "/images/hotel/IMG_8985.jpeg",
       "services": [
         {
           "id": "ginasio",
@@ -100,7 +100,7 @@
       "id": "comodidades",
       "label": "Comodidades",
       "desc": "Todos os detalhes pensados para que a sua estadia seja confortável, segura e sem preocupações.",
-      "image": "https://images.unsplash.com/photo-1596436889106-be35e843f974?w=900&q=80&auto=format&fit=crop",
+      "image": "/images/hotel/IMG_8988.jpeg",
       "services": [
         {
           "id": "wifi",

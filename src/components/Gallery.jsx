@@ -1,52 +1,53 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { X, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react'
+import OptimizedImage from './OptimizedImage'
 
 const images = [
   {
-    src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80&auto=format&fit=crop',
-    alt: 'Vista de Luanda ao pôr do sol',
+    src: '/images/hotel/IMG_8986.jpeg',
+    alt: 'Lobby & Lounge do Hotel Rainha Njinga',
     span: 'col-span-2 row-span-2',
-    label: 'Luanda ao Pôr do Sol',
+    label: 'Lobby & Lounge',
   },
   {
-    src: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80&auto=format&fit=crop',
+    src: '/images/hotel/IMG_8979.jpeg',
     alt: 'Quarto de luxo',
     span: '',
     label: 'Suite Njinga',
   },
   {
-    src: 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600&q=80&auto=format&fit=crop',
+    src: '/images/hotel/IMG_8981.jpeg',
     alt: 'Restaurante do hotel',
     span: '',
     label: 'Restaurante',
   },
   {
-    src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80&auto=format&fit=crop',
+    src: '/images/hotel/IMG_8984.jpeg',
     alt: 'Gastronomia angolana',
     span: '',
     label: 'Gastronomia Local',
   },
   {
-    src: 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&q=80&auto=format&fit=crop',
+    src: '/images/hotel/IMG_8988.jpeg',
     alt: 'Vista noturna de Luanda',
     span: '',
     label: 'Luanda by Night',
   },
   {
-    src: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80&auto=format&fit=crop',
+    src: '/images/hotel/IMG_8990.jpeg',
     alt: 'Banheiro de luxo',
     span: '',
     label: 'Banheiro Premium',
   },
   {
-    src: 'https://images.unsplash.com/photo-1603512500383-3f000ce4b3e0?w=600&q=80&auto=format&fit=crop',
+    src: '/images/hotel/IMG_8994.jpeg',
     alt: 'Bar do hotel',
     span: '',
     label: 'Bar & Lounge',
   },
   {
-    src: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80&auto=format&fit=crop',
+    src: '/images/hotel/IMG_8996.jpeg',
     alt: 'Sala de reuniões',
     span: '',
     label: 'Sala de Eventos',
@@ -101,7 +102,7 @@ export default function Gallery() {
             O Hotel em{' '}
             <span className="text-gold italic">Imagens</span>
           </h2>
-          <p className="font-inter text-njinga-white/55 max-w-xl mx-auto text-base">
+          <p className="font-inter text-njinga-white/70 max-w-xl mx-auto text-base">
             Descubra os espaços que tornam a sua estadia no Hotel Rainha Njinga uma experiência única.
           </p>
           <div className="section-divider mt-8">
@@ -131,9 +132,10 @@ export default function Gallery() {
               style={{ transitionDelay: `${i * 75}ms` }}
               onClick={() => setLightbox(i)}
             >
-              <img
+              <OptimizedImage
                 src={img.src}
                 alt={img.alt}
+                loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               {/* Overlay */}
@@ -174,15 +176,16 @@ export default function Gallery() {
             className="relative max-w-5xl max-h-[88vh] w-full"
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={images[lightbox].src.replace('w=600', 'w=1400').replace('w=800', 'w=1400')}
+            <OptimizedImage
+              src={images[lightbox].src}
               alt={images[lightbox].alt}
+              loading="eager"
               className="w-full h-full object-contain max-h-[80vh] mx-auto block"
             />
             {/* Caption */}
             <div className="mt-4 flex items-center justify-between px-2">
               <p className="font-playfair text-njinga-white text-lg">{images[lightbox].label}</p>
-              <p className="font-inter text-njinga-white/40 text-xs tracking-widest">
+              <p className="font-inter text-njinga-white/70 text-xs tracking-widest">
                 {lightbox + 1} / {images.length}
               </p>
             </div>

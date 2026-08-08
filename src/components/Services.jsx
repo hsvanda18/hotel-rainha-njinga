@@ -62,7 +62,7 @@ export default function Services() {
             Serviços &{' '}
             <span className="text-gold italic">Comodidades</span>
           </h2>
-          <p className="font-inter text-njinga-white/55 max-w-xl mx-auto text-base">
+          <p className="font-inter text-njinga-white/70 max-w-xl mx-auto text-base">
             Tudo o que precisa para uma estadia perfeita, disponível no Hotel Rainha Njinga.
           </p>
           <div className="section-divider mt-8">
@@ -95,7 +95,7 @@ export default function Services() {
               <h4 className="font-playfair text-sm font-semibold text-njinga-white mb-1 leading-tight">
                 {service.name}
               </h4>
-              <p className="font-inter text-[11px] text-njinga-white/45 leading-relaxed hidden sm:block">
+              <p className="font-inter text-[11px] text-njinga-white/70 leading-relaxed hidden sm:block">
                 {service.desc}
               </p>
             </div>

@@ -53,7 +53,7 @@ function ServiceCard({ service, index, visible }) {
           </div>
         </div>
 
-        <p className="font-inter text-njinga-white/50 text-sm leading-relaxed mb-5">
+        <p className="font-inter text-njinga-white/70 text-sm leading-relaxed mb-5">
           {service.desc}
         </p>
 
@@ -61,7 +61,7 @@ function ServiceCard({ service, index, visible }) {
           {service.details.map((d) => (
             <li key={d} className="flex items-start gap-2">
               <Check size={11} className="text-gold mt-0.5 flex-shrink-0" />
-              <span className="font-inter text-xs text-njinga-white/45">{d}</span>
+              <span className="font-inter text-xs text-njinga-white/70">{d}</span>
             </li>
           ))}
         </ul>
@@ -69,7 +69,7 @@ function ServiceCard({ service, index, visible }) {
         {service.link && (
           <Link
             to={service.link}
-            className="inline-flex items-center gap-1.5 font-inter text-xs text-gold/70 hover:text-gold tracking-wider uppercase transition-colors duration-200"
+            className="inline-flex items-center gap-1.5 font-inter text-xs text-gold hover:text-gold tracking-wider uppercase transition-colors duration-200"
           >
             {service.linkLabel}
             <ChevronRight size={12} />
@@ -102,6 +102,10 @@ function CategorySection({ category, index }) {
               <img
                 src={category.image}
                 alt={category.label}
+                width={1280}
+                height={853}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-56 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-njinga-black/60 via-transparent to-transparent" />
@@ -116,14 +120,14 @@ function CategorySection({ category, index }) {
           >
             <div className="flex items-center gap-3 mb-3">
               <div className="h-px flex-1 max-w-8 bg-gold/40" />
-              <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60">
+              <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold">
                 {String(index + 1).padStart(2, '0')}
               </p>
             </div>
             <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-njinga-white mb-4 leading-tight">
               {category.label}
             </h2>
-            <p className="font-inter text-njinga-white/50 text-sm leading-relaxed">
+            <p className="font-inter text-njinga-white/70 text-sm leading-relaxed">
               {category.desc}
             </p>
           </div>
@@ -166,8 +170,13 @@ export default function ServicesPage() {
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1600&q=80&auto=format&fit=crop"
+            src="/images/hotel/IMG_8990.jpeg"
             alt="Serviços do Hotel Rainha Njinga"
+            width={1280}
+            height={853}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             className="w-full h-full object-cover opacity-20"
           />
           <div
@@ -191,7 +200,7 @@ export default function ServicesPage() {
               <span className="text-gold italic">Comodidades</span>
             </h1>
             <p
-              className={`font-inter text-njinga-white/60 text-base leading-relaxed mb-10 max-w-lg transition-all duration-700 delay-150 ${
+              className={`font-inter text-njinga-white/70 text-base leading-relaxed mb-10 max-w-lg transition-all duration-700 delay-150 ${
                 heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
@@ -209,7 +218,7 @@ export default function ServicesPage() {
                 <button
                   key={cat.id}
                   onClick={() => scrollToCategory(cat.id)}
-                  className="font-inter text-xs tracking-wider uppercase px-4 py-2 border border-njinga-gray/50 text-njinga-white/50 hover:border-gold/50 hover:text-gold transition-all duration-200 flex items-center gap-1.5"
+                  className="font-inter text-xs tracking-wider uppercase px-4 py-2 border border-njinga-gray/50 text-njinga-white/70 hover:border-gold/50 hover:text-gold transition-all duration-200 flex items-center gap-1.5"
                 >
                   {cat.label}
                   <ChevronRight size={11} />
@@ -233,7 +242,7 @@ export default function ServicesPage() {
                 <p className="font-playfair text-2xl font-bold text-gold">
                   {cat.services.length}
                 </p>
-                <p className="font-inter text-[10px] uppercase tracking-widest text-njinga-white/40 mt-0.5 group-hover:text-gold/60 transition-colors duration-200">
+                <p className="font-inter text-[10px] uppercase tracking-widest text-njinga-white/70 mt-0.5 group-hover:text-gold/60 transition-colors duration-200">
                   {cat.label}
                 </p>
               </button>
@@ -255,7 +264,7 @@ export default function ServicesPage() {
             Todos estes serviços{' '}
             <span className="text-gold italic">incluídos</span>
           </h2>
-          <p className="font-inter text-njinga-white/45 text-sm mb-8">
+          <p className="font-inter text-njinga-white/70 text-sm mb-8">
             Reserve já a sua estadia e desfrute de todos os serviços do Hotel Rainha Njinga.
             Para pedidos especiais, contacte-nos directamente.
           </p>

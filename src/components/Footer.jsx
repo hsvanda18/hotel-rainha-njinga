@@ -71,7 +71,7 @@ export default function Footer() {
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} size={12} className="text-gold fill-gold" />
                 ))}
-                <span className="font-inter text-sm text-njinga-white/50 ml-1">4.9 — 200+ avaliações</span>
+                <span className="font-inter text-sm text-njinga-white/70 ml-1">4.9 — 200+ avaliações</span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
@@ -95,12 +95,12 @@ export default function Footer() {
               <Crown size={22} className="text-gold" />
               <div className="leading-tight">
                 <p className="font-playfair text-lg font-bold text-gold">Hotel Rainha</p>
-                <p className="font-playfair text-sm font-medium text-gold/65 tracking-[0.2em] uppercase">
+                <p className="font-playfair text-sm font-medium text-gold tracking-[0.2em] uppercase">
                   Njinga
                 </p>
               </div>
             </div>
-            <p className="font-inter text-sm text-njinga-white/45 leading-relaxed mb-6">
+            <p className="font-inter text-sm text-njinga-white/70 leading-relaxed mb-6">
               Inspirado pela grandeza da Rainha Njinga Mbande. Elegância, conforto e a
               hospitalidade angolana no coração de Luanda.
             </p>
@@ -127,7 +127,7 @@ export default function Footer() {
 
           {/* Quick links */}
           <div>
-            <h4 className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-5 pb-3 border-b border-gold/15">
+            <h4 className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-5 pb-3 border-b border-gold/15">
               Links Rápidos
             </h4>
             <ul className="space-y-3">
@@ -135,7 +135,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <button
                     onClick={() => handleNavClick(link.section)}
-                    className="font-inter text-sm text-njinga-white/50 hover:text-gold transition-colors duration-200
+                    className="font-inter text-sm text-njinga-white/70 hover:text-gold transition-colors duration-200
                                flex items-center gap-2 group"
                   >
                     <span className="w-0 group-hover:w-3 h-px bg-gold transition-all duration-300 overflow-hidden" />
@@ -147,7 +147,7 @@ export default function Footer() {
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="font-inter text-sm text-njinga-white/50 hover:text-gold transition-colors duration-200
+                    className="font-inter text-sm text-njinga-white/70 hover:text-gold transition-colors duration-200
                                flex items-center gap-2 group"
                   >
                     <span className="w-0 group-hover:w-3 h-px bg-gold transition-all duration-300 overflow-hidden" />
@@ -160,13 +160,13 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-5 pb-3 border-b border-gold/15">
+            <h4 className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-5 pb-3 border-b border-gold/15">
               Serviços
             </h4>
             <ul className="space-y-3">
               {['Restaurante & Bar', 'Quartos & Suites', 'Sala de Reuniões', 'Ginásio', 'Lavandaria', 'Estacionamento'].map((s) => (
                 <li key={s}>
-                  <span className="font-inter text-sm text-njinga-white/45">{s}</span>
+                  <span className="font-inter text-sm text-njinga-white/70">{s}</span>
                 </li>
               ))}
             </ul>
@@ -174,26 +174,26 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-5 pb-3 border-b border-gold/15">
+            <h4 className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-5 pb-3 border-b border-gold/15">
               Contacto
             </h4>
             <ul className="space-y-4">
               <li className="flex gap-3">
                 <MapPin size={14} className="text-gold/60 flex-shrink-0 mt-0.5" />
-                <p className="font-inter text-sm text-njinga-white/50 leading-relaxed">
+                <p className="font-inter text-sm text-njinga-white/70 leading-relaxed">
                   Bairro Morro Bento, Rua dos Generais S/N,
                   Distrito do Samba, Luanda, Angola
                 </p>
               </li>
               <li className="flex gap-3">
                 <Phone size={14} className="text-gold/60 flex-shrink-0" />
-                <a href="tel:+244923456789" className="font-inter text-sm text-njinga-white/50 hover:text-gold transition-colors duration-200">
+                <a href="tel:+244923456789" className="font-inter text-sm text-njinga-white/70 hover:text-gold transition-colors duration-200">
                   +244 923 456 789
                 </a>
               </li>
               <li className="flex gap-3">
                 <Mail size={14} className="text-gold/60 flex-shrink-0" />
-                <a href="mailto:reservas@hotelrainhanjinga.ao" className="font-inter text-sm text-njinga-white/50 hover:text-gold transition-colors duration-200 break-all">
+                <a href="mailto:reservas@hotelrainhanjinga.ao" className="font-inter text-sm text-njinga-white/70 hover:text-gold transition-colors duration-200 break-all">
                   reservas@hotelrainhanjinga.ao
                 </a>
               </li>
@@ -203,7 +203,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-njinga-gray/30 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="font-inter text-xs text-njinga-white/30 text-center sm:text-left">
+          <p className="font-inter text-xs text-njinga-white/70 text-center sm:text-left">
             © 2026 Hotel Rainha Njinga. Todos os direitos reservados.
           </p>
           <div className="flex gap-5">
@@ -211,7 +211,7 @@ export default function Footer() {
               <a
                 key={item}
                 href="#"
-                className="font-inter text-xs text-njinga-white/30 hover:text-gold/60 transition-colors duration-200"
+                className="font-inter text-xs text-njinga-white/70 hover:text-gold/60 transition-colors duration-200"
               >
                 {item}
               </a>
@@ -220,8 +220,8 @@ export default function Footer() {
         </div>
 
         {/* Developer credit */}
-        <p className="font-inter text-[11px] text-njinga-white/20 text-center mt-4">
-          Developed by <span className="text-gold/40">Bit &amp; Brush</span>
+        <p className="font-inter text-[11px] text-njinga-white/70 text-center mt-4">
+          Developed by <span className="text-gold/80">Bit &amp; Brush</span>
         </p>
       </div>
     </footer>

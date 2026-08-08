@@ -118,7 +118,7 @@ function FAQ({ item }) {
         }
       </button>
       <div className={`overflow-hidden transition-all duration-300 ${open ? 'max-h-48 pb-5' : 'max-h-0'}`}>
-        <p className="font-inter text-sm text-njinga-white/50 leading-relaxed">
+        <p className="font-inter text-sm text-njinga-white/70 leading-relaxed">
           {item.a}
         </p>
       </div>
@@ -154,8 +154,13 @@ export default function ContactPage() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=1600&q=80&auto=format&fit=crop"
+            src="/images/hotel/IMG_8977.jpeg"
             alt="Contactos"
+            width={1280}
+            height={853}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             className="w-full h-full object-cover opacity-15"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-njinga-black/80 via-njinga-black/70 to-njinga-black" />
@@ -167,7 +172,7 @@ export default function ContactPage() {
               Entre em{' '}
               <span className="text-gold italic">Contacto</span>
             </h1>
-            <p className="font-inter text-njinga-white/55 max-w-xl text-base mb-8">
+            <p className="font-inter text-njinga-white/70 max-w-xl text-base mb-8">
               A nossa equipa está disponível 24 horas por dia para ajudar na sua reserva,
               organizar o seu evento ou responder a qualquer questão.
             </p>
@@ -209,7 +214,7 @@ export default function ContactPage() {
                     <info.icon size={17} className="text-gold" />
                   </div>
                   <div className="flex-1">
-                    <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-1">
+                    <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-1">
                       {info.title}
                     </p>
                     {info.lines.map((line, i) => (
@@ -218,7 +223,7 @@ export default function ContactPage() {
                     {info.action && (
                       <a
                         href={info.action.href}
-                        className="inline-flex items-center gap-1 font-inter text-xs text-gold/60 hover:text-gold mt-2 transition-colors duration-200"
+                        className="inline-flex items-center gap-1 font-inter text-xs text-gold hover:text-gold mt-2 transition-colors duration-200"
                       >
                         {info.action.label}
                         <ArrowRight size={11} />
@@ -241,7 +246,7 @@ export default function ContactPage() {
                 <div>
                   <p className="font-inter text-[10px] tracking-[0.2em] uppercase text-[#25D366]/70 mb-1">WhatsApp</p>
                   <p className="font-inter text-sm text-njinga-white/75">Mensagem rápida via WhatsApp</p>
-                  <p className="font-inter text-xs text-njinga-white/35 mt-0.5">Resposta em minutos</p>
+                  <p className="font-inter text-xs text-njinga-white/70 mt-0.5">Resposta em minutos</p>
                 </div>
               </a>
 
@@ -264,11 +269,11 @@ export default function ContactPage() {
                   </div>
                   <div className="mt-2 bg-njinga-black/90 border border-gold/40 px-3 py-1.5 text-center">
                     <p className="font-playfair text-xs text-gold font-semibold">Hotel Rainha Njinga</p>
-                    <p className="font-inter text-[10px] text-njinga-white/55 mt-0.5">Morro Bento, Luanda</p>
+                    <p className="font-inter text-[10px] text-njinga-white/70 mt-0.5">Morro Bento, Luanda</p>
                   </div>
                 </div>
                 <div className="absolute top-3 left-3 bg-njinga-black/80 border border-gold/20 px-2 py-1">
-                  <p className="font-inter text-[10px] text-gold/60 tracking-wider uppercase">Localização</p>
+                  <p className="font-inter text-[10px] text-gold tracking-wider uppercase">Localização</p>
                 </div>
               </div>
             </div>
@@ -279,7 +284,7 @@ export default function ContactPage() {
                 <h3 className="font-playfair text-2xl font-bold text-njinga-white mb-1">
                   Envie-nos uma Mensagem
                 </h3>
-                <p className="font-inter text-sm text-njinga-white/45 mb-8">
+                <p className="font-inter text-sm text-njinga-white/70 mb-8">
                   Preencha o formulário e entraremos em contacto em menos de 24 horas.
                 </p>
 
@@ -289,7 +294,7 @@ export default function ContactPage() {
                       <CheckCircle size={36} className="text-gold" />
                     </div>
                     <h4 className="font-playfair text-2xl font-bold text-njinga-white mb-3">Mensagem Enviada!</h4>
-                    <p className="font-inter text-njinga-white/55 text-sm max-w-xs">
+                    <p className="font-inter text-njinga-white/70 text-sm max-w-xs">
                       Obrigado pelo seu contacto. A nossa equipa responderá em breve.
                     </p>
                   </div>
@@ -297,10 +302,11 @@ export default function ContactPage() {
                   <form onSubmit={handleSubmit} className="space-y-5">
                     {/* Tipo de consulta */}
                     <div>
-                      <label className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-2">
+                      <label htmlFor="cp-type" className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-2">
                         Tipo de Consulta *
                       </label>
                       <select
+                        id="cp-type"
                         name="type"
                         value={form.type}
                         onChange={handleChange}
@@ -316,34 +322,34 @@ export default function ContactPage() {
 
                     <div className="grid sm:grid-cols-2 gap-5">
                       <div>
-                        <label className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-2">
+                        <label htmlFor="cp-name" className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-2">
                           Nome Completo *
                         </label>
-                        <input type="text" name="name" value={form.name} onChange={handleChange}
+                        <input id="cp-name" type="text" name="name" value={form.name} onChange={handleChange}
                           placeholder="O seu nome" required className="input-gold" />
                       </div>
                       <div>
-                        <label className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-2">
+                        <label htmlFor="cp-email" className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-2">
                           Email *
                         </label>
-                        <input type="email" name="email" value={form.email} onChange={handleChange}
+                        <input id="cp-email" type="email" name="email" value={form.email} onChange={handleChange}
                           placeholder="email@exemplo.com" required className="input-gold" />
                       </div>
                     </div>
 
                     <div className="grid sm:grid-cols-2 gap-5">
                       <div>
-                        <label className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-2">
+                        <label htmlFor="cp-phone" className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-2">
                           Telefone
                         </label>
-                        <input type="tel" name="phone" value={form.phone} onChange={handleChange}
+                        <input id="cp-phone" type="tel" name="phone" value={form.phone} onChange={handleChange}
                           placeholder="+244 9XX XXX XXX" className="input-gold" />
                       </div>
                       <div>
-                        <label className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-2">
+                        <label htmlFor="cp-guests" className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-2">
                           Nº de Hóspedes
                         </label>
-                        <select name="guests" value={form.guests} onChange={handleChange}
+                        <select id="cp-guests" name="guests" value={form.guests} onChange={handleChange}
                           className="input-gold cursor-pointer">
                           {[1, 2, 3, 4, 5].map((n) => (
                             <option key={n} value={n} className="bg-njinga-charcoal">
@@ -358,27 +364,27 @@ export default function ContactPage() {
                     {(form.type === 'reserva' || form.type === 'evento') && (
                       <div className="grid sm:grid-cols-2 gap-5">
                         <div>
-                          <label className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-2">
+                          <label htmlFor="cp-checkin" className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-2">
                             {form.type === 'evento' ? 'Data do Evento' : 'Check-in'}
                           </label>
-                          <input type="date" name="checkin" value={form.checkin} onChange={handleChange}
+                          <input id="cp-checkin" type="date" name="checkin" value={form.checkin} onChange={handleChange}
                             className="input-gold [color-scheme:dark]" />
                         </div>
                         <div>
-                          <label className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-2">
+                          <label htmlFor="cp-checkout" className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-2">
                             {form.type === 'evento' ? 'Fim do Evento' : 'Check-out'}
                           </label>
-                          <input type="date" name="checkout" value={form.checkout} onChange={handleChange}
+                          <input id="cp-checkout" type="date" name="checkout" value={form.checkout} onChange={handleChange}
                             className="input-gold [color-scheme:dark]" />
                         </div>
                       </div>
                     )}
 
                     <div>
-                      <label className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold/60 mb-2">
+                      <label htmlFor="cp-message" className="block font-inter text-[10px] tracking-[0.2em] uppercase text-gold mb-2">
                         Mensagem
                       </label>
-                      <textarea name="message" value={form.message} onChange={handleChange}
+                      <textarea id="cp-message" name="message" value={form.message} onChange={handleChange}
                         rows={4} placeholder="Descreva o seu pedido, preferências ou questões..."
                         className="input-gold resize-none" />
                     </div>
@@ -389,7 +395,7 @@ export default function ContactPage() {
                       Enviar Mensagem
                     </button>
 
-                    <p className="font-inter text-[11px] text-njinga-white/25 text-center">
+                    <p className="font-inter text-[11px] text-njinga-white/70 text-center">
                       Os seus dados são tratados com total confidencialidade.
                     </p>
                   </form>
@@ -426,15 +432,15 @@ export default function ContactPage() {
                     <Icon size={22} className="text-gold" />
                   </div>
                   <h3 className="font-playfair text-lg font-bold text-njinga-white mb-2">{dept.name}</h3>
-                  <p className="font-inter text-xs text-njinga-white/45 leading-relaxed mb-5">{dept.desc}</p>
+                  <p className="font-inter text-xs text-njinga-white/70 leading-relaxed mb-5">{dept.desc}</p>
                   <div className="space-y-2 pt-4 border-t border-njinga-gray/30">
                     <a href={`mailto:${dept.email}`}
-                      className="flex items-center gap-2 font-inter text-xs text-njinga-white/50 hover:text-gold transition-colors duration-200 truncate">
+                      className="flex items-center gap-2 font-inter text-xs text-njinga-white/70 hover:text-gold transition-colors duration-200 truncate">
                       <Mail size={11} className="text-gold/50 flex-shrink-0" />
                       {dept.email}
                     </a>
                     <a href={`tel:${dept.phone.replace(/\s/g, '')}`}
-                      className="flex items-center gap-2 font-inter text-xs text-njinga-white/50 hover:text-gold transition-colors duration-200">
+                      className="flex items-center gap-2 font-inter text-xs text-njinga-white/70 hover:text-gold transition-colors duration-200">
                       <Phone size={11} className="text-gold/50 flex-shrink-0" />
                       {dept.phone}
                     </a>
@@ -466,7 +472,7 @@ export default function ContactPage() {
             ))}
           </div>
 
-          <p className="font-inter text-xs text-njinga-white/30 text-center mt-6">
+          <p className="font-inter text-xs text-njinga-white/70 text-center mt-6">
             Não encontrou resposta?{' '}
             <a href="mailto:hrainhanjinga@hotmail.com" className="text-gold/60 hover:text-gold transition-colors duration-200">
               Envie-nos um email
@@ -483,7 +489,7 @@ export default function ContactPage() {
             Pronto para a sua{' '}
             <span className="text-gold italic">visita?</span>
           </h2>
-          <p className="font-inter text-njinga-white/45 text-sm mb-8">
+          <p className="font-inter text-njinga-white/70 text-sm mb-8">
             Explore os nossos quartos, restaurante e serviços enquanto planeia a sua estadia.
           </p>
           <div className="flex items-center justify-center gap-4 flex-wrap">
