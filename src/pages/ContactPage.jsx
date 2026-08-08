@@ -182,7 +182,7 @@ export default function ContactPage() {
                 Ligar Agora
               </a>
               <a
-                href="https://wa.me/244923456789"
+                href="https://wa.me/244943354257"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline-gold text-xs py-3 px-8 flex items-center gap-2"
@@ -235,7 +235,7 @@ export default function ContactPage() {
 
               {/* WhatsApp */}
               <a
-                href="https://wa.me/244923456789"
+                href="https://wa.me/244943354257"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 bg-[#25D366]/10 border border-[#25D366]/30 hover:border-[#25D366]/60 hover:bg-[#25D366]/15 p-5 transition-all duration-300 group"

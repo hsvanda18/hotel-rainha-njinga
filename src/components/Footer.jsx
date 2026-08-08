@@ -78,7 +78,7 @@ export default function Footer() {
               <Link to="/contactos" className="btn-gold py-3 px-8 text-xs">
                 Reserve Agora
               </Link>
-              <a href="tel:+244923456789" className="btn-outline-gold py-3 px-8 text-xs">
+              <a href="tel:+244943354257" className="btn-outline-gold py-3 px-8 text-xs">
                 Ligar para o Hotel
               </a>
             </div>
@@ -187,8 +187,8 @@ export default function Footer() {
               </li>
               <li className="flex gap-3">
                 <Phone size={14} className="text-gold/60 flex-shrink-0" />
-                <a href="tel:+244923456789" className="font-inter text-sm text-njinga-white/70 hover:text-gold transition-colors duration-200">
-                  +244 923 456 789
+                <a href="tel:+244943354257" className="font-inter text-sm text-njinga-white/70 hover:text-gold transition-colors duration-200">
+                  +244 943 354 257
                 </a>
               </li>
               <li className="flex gap-3">

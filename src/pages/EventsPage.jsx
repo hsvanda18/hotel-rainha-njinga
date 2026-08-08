@@ -177,7 +177,7 @@ export default function EventsPage() {
                 Solicitar Proposta
                 <ArrowRight size={14} />
               </button>
-              <a href="tel:+244923456789" className="btn-outline-gold text-xs py-3 px-8 flex items-center gap-2">
+              <a href="tel:+244943354257" className="btn-outline-gold text-xs py-3 px-8 flex items-center gap-2">
                 <Phone size={14} />
                 Falar Connosco
               </a>
@@ -222,11 +222,11 @@ export default function EventsPage() {
                   Precisa de uma configuração personalizada ou tem dúvidas sobre os espaços?
                 </p>
                 <a
-                  href="tel:+244923456789"
+                  href="tel:+244943354257"
                   className="font-inter text-xs text-gold hover:text-gold-light flex items-center gap-2 transition-colors duration-200"
                 >
                   <Phone size={12} />
-                  +244 923 456 789
+                  +244 943 354 257
                 </a>
               </div>
             </div>

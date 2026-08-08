@@ -14,7 +14,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Telefone',
-    lines: ['+244 923 456 789', '+244 222 345 678'],
+    lines: ['+244 943 354 257', '+244 222 345 678'],
   },
   {
     icon: Mail,
@@ -111,7 +111,7 @@ export default function Contact() {
 
             {/* WhatsApp quick contact */}
             <a
-              href="https://wa.me/244923456789"
+              href="https://wa.me/244943354257"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 bg-[#25D366]/10 border border-[#25D366]/30 hover:border-[#25D366]/60 hover:bg-[#25D366]/15 p-5 transition-all duration-300 group"

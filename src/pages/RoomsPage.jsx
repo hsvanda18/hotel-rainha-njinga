@@ -229,7 +229,7 @@ function RoomCard({ room }) {
             <ArrowRight size={15} />
           </button>
           <a
-            href="tel:+244923456789"
+            href="tel:+244943354257"
             className="flex items-center justify-center gap-2 py-3 px-4 border border-njinga-gray/40 text-njinga-white/70 hover:border-gold/30 hover:text-gold font-inter text-sm transition-all duration-300"
           >
             <Phone size={15} />

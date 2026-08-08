@@ -125,7 +125,7 @@ export default function RestaurantPage() {
                 Reservar Mesa
                 <ArrowRight size={14} />
               </button>
-              <a href="tel:+244923456789" className="btn-outline-gold text-xs py-3 px-8 flex items-center gap-2">
+              <a href="tel:+244943354257" className="btn-outline-gold text-xs py-3 px-8 flex items-center gap-2">
                 <Phone size={14} />
                 Ligar
               </a>
